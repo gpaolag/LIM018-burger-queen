@@ -8,7 +8,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class LoginComponent implements OnInit {
 
-  formLogin: FormGroup;
+  public formLogin: FormGroup;
 
   constructor(
     private userService: UserService
@@ -23,10 +23,10 @@ export class LoginComponent implements OnInit {
   }
   onSubmit() {
     this.userService.login(this.formLogin.value)
-      .then(response => {
+      .then((response: any) => {
         console.log(response);
       })
-      .catch(error => console.log(error));
+      .catch((error: any) => console.log(error));
   }
 
 }

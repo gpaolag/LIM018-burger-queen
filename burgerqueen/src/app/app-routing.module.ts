@@ -4,7 +4,7 @@ import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { ControlPedidosComponent } from './components/control-pedidos/control-pedidos.component';
 import { HistorialPedidosComponent } from './components/historial-pedidos/historial-pedidos.component';
 import { LoginComponent } from './components/login/login.component';
- 
+
 
 const routes: Routes = [
   {path:'login', component: LoginComponent},
