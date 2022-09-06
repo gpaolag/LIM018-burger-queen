@@ -7,6 +7,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { ControlPedidosComponent } from './components/control-pedidos/control-pedidos.component';
 import { HistorialPedidosComponent } from './components/historial-pedidos/historial-pedidos.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { LoginComponent } from './components/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
  
 @NgModule({
@@ -15,11 +20,14 @@ import { HistorialPedidosComponent } from './components/historial-pedidos/histor
     NavbarComponent,
     PedidosComponent,
     ControlPedidosComponent,
-    HistorialPedidosComponent
+    HistorialPedidosComponent,
+    LoginComponent
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth())
   ],
   providers: [],
   bootstrap: [AppComponent]

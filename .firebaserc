@@ -1,6 +1,7 @@
 {
   "projects": {
-    "burgerpe": "burger-queen-pe"
+    "burgerpe": "burger-queen-pe",
+    "default": "burger-queen-pe"
   },
   "targets": {},
   "etags": {}
