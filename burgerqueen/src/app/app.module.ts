@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { ControlPedidosComponent } from './components/control-pedidos/control-pedidos.component';
 import { HistorialPedidosComponent } from './components/historial-pedidos/historial-pedidos.component';
+import { AdminComponent } from './components/usuarios/admin/admin.component';
 
  
 @NgModule({
@@ -15,7 +16,8 @@ import { HistorialPedidosComponent } from './components/historial-pedidos/histor
     NavbarComponent,
     PedidosComponent,
     ControlPedidosComponent,
-    HistorialPedidosComponent
+    HistorialPedidosComponent,
+    AdminComponent
    ],
   imports: [
     BrowserModule,
