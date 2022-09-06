@@ -3,11 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { PedidosComponent } from './components/pedidos/pedidos.component';
+import { ControlPedidosComponent } from './components/control-pedidos/control-pedidos.component';
+import { HistorialPedidosComponent } from './components/historial-pedidos/historial-pedidos.component';
 
+ 
 @NgModule({
   declarations: [
-    AppComponent
-  ],
+    AppComponent,
+    NavbarComponent,
+    PedidosComponent,
+    ControlPedidosComponent,
+    HistorialPedidosComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule
