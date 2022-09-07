@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -11,7 +12,8 @@ export class LoginComponent implements OnInit {
   public formLogin: FormGroup;
 
   constructor(
-    private userService: UserService
+    private userService: UserService,
+    private router: Router
   ) {
     this.formLogin = new FormGroup({
       email: new FormControl(),
@@ -25,6 +27,7 @@ export class LoginComponent implements OnInit {
     this.userService.login(this.formLogin.value)
       .then((response: any) => {
         console.log(response);
+        this.router.navigate(['/pedidos']);
       })
       .catch((error: any) => console.log(error));
   }
