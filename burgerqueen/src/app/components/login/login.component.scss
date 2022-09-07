@@ -1,0 +1,25 @@
+.principal{
+    display: flex;
+    background-image: url('../images/fondologin.jpg');
+    background-size: cover;
+}
+#foto{
+    min-width: 50%;
+}
+.middle{
+    display: flex;
+    max-width: 50%;
+}
+.formLog{
+    background-color: darkgray;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 25px;
+}
+#formL{
+    background-color: rgb(195, 145, 53);
+    min-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
