@@ -15,6 +15,8 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { LoginComponent } from './components/login/login.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { NavbaradminComponent } from './components/navbaradmin/navbaradmin.component';
+import { ProductosComponent } from './components/productos/productos.component';
 
 
  
@@ -25,7 +27,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     PedidosComponent,
     ControlPedidosComponent,
     HistorialPedidosComponent,
-    LoginComponent
+    LoginComponent,
+    NavbaradminComponent,
+    ProductosComponent
    ],
   imports: [
     ReactiveFormsModule,

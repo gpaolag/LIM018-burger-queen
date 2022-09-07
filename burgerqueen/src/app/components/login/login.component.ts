@@ -27,7 +27,13 @@ export class LoginComponent implements OnInit {
     this.userService.login(this.formLogin.value)
       .then((response: any) => {
         console.log(response);
-        this.router.navigate(['/pedidos']);
+        const emailuser : any = response.user.email;
+        if (/coffeedream.com/.test(emailuser)){
+          this.router.navigate(['productos']);
+        }
+        else if(/coffeedream2.com/.test(emailuser)){
+          this.router.navigate(['pedidos']);
+        }
       })
       .catch((error: any) => console.log(error));
   }
