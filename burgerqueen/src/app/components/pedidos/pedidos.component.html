@@ -5,10 +5,10 @@
 </div>
 <div class="card-box">
     <div  *ngFor="let pedido of pedidos" class="card border-success m-3" style="max-width: 18rem;">
-        <div class="card-body text-success">
-          <h5 class="card-title"> <img id="img-pedido" [src]="pedido.img" /></h5>
-          <h5 class="card-title">{{pedido.name}}</h5>
-          <h5 class="card-title"> Costo: s/.{{pedido.price}}</h5>
+        <div class="card-body">
+          <img id="img-pedido" [src]="pedido.img" />
+          <p>{{pedido.name}}</p>
+          <p> Costo: s/.{{pedido.price}}</p>
           <!-- <p class="card-text">{{pedido.category}}</p> -->
         </div>
         <div class="card-footer bg-transparent border-success flex-box">

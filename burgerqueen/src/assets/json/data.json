@@ -9,28 +9,28 @@
             "name" : "Café con leche",
             "price" : "7",
             "category": "desayuno",
-            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+            "img" : "https://www.gastronomiavasca.net/uploads/image/file/6169/caf__con_leche1.jpg"
 
         },
         {
             "name" : "Sandwich de jamón y queso",
             "price" : "10",
             "category": "desayuno",
-            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+            "img" : "https://recetaland.com/wp-content/uploads/2020/10/Sandwich-de-Pavo-y-Queso-1.jpg"
 
         },
         {
             "name" : "Jugo de frutas natural",
             "price" : "7",
             "category": "desayuno",
-            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+            "img" : "https://cdn-3.expansion.mx/76/bc/5ea06e1c41dab8c510b3c8370d39/istock-654357990.jpg"
 
         },
         {
             "name" : "Hamburguesa simple",
             "price" : "10",
             "category": "hamburguesas",
-            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+            "img" : "https://ciempizzas.es/wp-content/uploads/2022/04/Normal.jpg"
 
         },
         {
@@ -44,42 +44,42 @@
             "name" : "Papas fritas",
             "price" : "5",
             "category": "acompañamientos",
-            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+            "img" : "https://www.tqma.com.ec/images/com_yoorecipe/banner_superior/15075_1.jpg"
 
         },
         {
             "name" : "Aros de cebolla",
             "price" : "5",
             "category": "acompañamientos",
-            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+            "img" : "https://www.paulinacocina.net/wp-content/uploads/2021/12/aros-de-cebolla-fritos.jpg"
 
         },
         {
             "name" : "Agua 500ml",
             "price" : "5",
             "category": "bebidas",
-            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+            "img" : "https://liderdelivery.com/wp-content/uploads/2020/06/blancooooooooooooooo-2-copia-1.jpg"
 
         },
         {
             "name" : "Agua 750ml",
             "price" : "7",
             "category": "bebidas",
-            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+            "img" : "https://imgproxy.acelerala.com/pQ4Wc7mQVxg/rs:fill:750::1/q:0/aHR0cHM6Ly9jZG4uYWNlbGVyYWxhLmNvbS9maWxlcy91cGxvYWRzLzMwMDcvMTYwMjAwNTEwMi0xMjUtYWd1YXNhbmx1aXM2MjVtbC1qcGcuanBn.jpg"
 
         },
         {
             "name" : "Bebida/gaseosa 500ml",
             "price" : "7",
             "category": "bebidas",
-            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+            "img" : "https://estiloperuano.com/wp-content/uploads/2020/05/Gaseosa-Coca-Cola-Botella-500ml.png"
 
         },
         {
             "name" : "Bebida/gaseosa 750ml",
             "price" : "10",
             "category": "bebidas",
-            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+            "img" : "https://chely.pe/wp-content/uploads/2019/01/PEPSI-X-1.5-L.jpg"
 
         }
 ]
