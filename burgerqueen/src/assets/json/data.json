@@ -1,0 +1,85 @@
+ [
+        {
+           "name" : "Café americano",
+           "price" : "5",
+           "category" : "desayuno",
+           "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+        },
+        {
+            "name" : "Café con leche",
+            "price" : "7",
+            "category": "desayuno",
+            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+
+        },
+        {
+            "name" : "Sandwich de jamón y queso",
+            "price" : "10",
+            "category": "desayuno",
+            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+
+        },
+        {
+            "name" : "Jugo de frutas natural",
+            "price" : "7",
+            "category": "desayuno",
+            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+
+        },
+        {
+            "name" : "Hamburguesa simple",
+            "price" : "10",
+            "category": "hamburguesas",
+            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+
+        },
+        {
+            "name" : "Hamburguesa doble",
+            "price" : "15",
+            "category": "hamburguesas",
+            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+
+        },
+        {
+            "name" : "Papas fritas",
+            "price" : "5",
+            "category": "acompañamientos",
+            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+
+        },
+        {
+            "name" : "Aros de cebolla",
+            "price" : "5",
+            "category": "acompañamientos",
+            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+
+        },
+        {
+            "name" : "Agua 500ml",
+            "price" : "5",
+            "category": "bebidas",
+            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+
+        },
+        {
+            "name" : "Agua 750ml",
+            "price" : "7",
+            "category": "bebidas",
+            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+
+        },
+        {
+            "name" : "Bebida/gaseosa 500ml",
+            "price" : "7",
+            "category": "bebidas",
+            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+
+        },
+        {
+            "name" : "Bebida/gaseosa 750ml",
+            "price" : "10",
+            "category": "bebidas",
+            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+
+        }
+]
