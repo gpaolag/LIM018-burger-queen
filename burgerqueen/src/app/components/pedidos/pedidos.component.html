@@ -1,23 +1,24 @@
 <app-navbar></app-navbar>
 <div class="container-fluid text-center">
     <h1>vista pedidos</h1>
-   
+    <button id="btn_hamburguesa" value="hamburguesas" (click)="typeofCategory('hamburguesas')">Hamburguesas</button>
+    <button id="btn_hamburguesa" value="desayuno" (click)="typeofCategory('desayuno')">Desayunos</button>
+    <button id="btn_hamburguesa" value="acompañamientos"
+        (click)="typeofCategory('acompañamientos')">Acompañamientos</button>
+    <button id="btn_hamburguesa" value="bebidas" (click)="typeofCategory('bebidas')">Bebidas</button>
 </div>
 <div class="card-box">
-    <div  *ngFor="let pedido of pedidos" class="card border-success m-3" style="max-width: 18rem;">
+    <div *ngFor="let pedido of products" class="card border-success m-3" style="max-width: 18rem;">
         <div class="card-body">
-          <img id="img-pedido" [src]="pedido.img" />
-          <p>{{pedido.name}}</p>
-          <p> Costo: s/.{{pedido.price}}</p>
-          <!-- <p class="card-text">{{pedido.category}}</p> -->
+            <img id="img-pedido" [src]="pedido.img" />
+            <p>{{pedido.name}}</p>
+            <p> Costo: s/.{{pedido.price}}</p>
+            <!-- <p class="card-text">{{pedido.category}}</p> -->
         </div>
         <div class="card-footer bg-transparent border-success flex-box">
             <button type="button" class="btn btn-success">Añadir</button>
             <h5 class="m-2"> 1 </h5>
             <button type="button" class="btn btn-danger">Quitar</button>
-
         </div>
     </div>
 </div>
-
-
