@@ -1,25 +1,48 @@
-.principal{
-    display: flex;
-    background-image: url('../images/fondologin.jpg');
-    background-size: cover;
-}
-#foto{
-    min-width: 50%;
-}
-.middle{
-    display: flex;
-    max-width: 50%;
-}
-.formLog{
-    background-color: darkgray;
-    margin: 30px;
-    padding: 30px;
-    border-radius: 25px;
-}
-#formL{
-    background-color: rgb(195, 145, 53);
-    min-width: 50%;
+// clases globales
+.center{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.btnClass{
+    width: 100%;
+    height: 2.5em;
+    text-align: center;
+    border-radius: 15px;
+    border: none;
+    margin-top: 1em;
+    background-color: #795A30;
+    color: #ffff;
+    font-size: 22px;
+    font-weight:900px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.btnClass:hover{
+    background-color: #AB8A3C;
+}
+
+
+// clases locales
+.principal{
+    background-image: url('https://fondosmil.com/fondo/15532.jpg');
+    background-size: cover;
+    height: 100%;     
+}
+
+.formLog{
+    background-color: #fcb54a;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 25px; 
+   }
+.formLog h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+// #formL{   
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }

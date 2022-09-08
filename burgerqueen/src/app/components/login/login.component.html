@@ -1,21 +1,27 @@
-<section class="principal">
-    <div id="formL" class="middle">
+<section class="principal center">
+    <div id="formL">
         <div class="formLog">
-            <h2>Registro de usuario</h2>
+            <div class="center">
+                <img src="../images/logo.jpg">
+            </div>
+            <h2>Login - Coffe Dream</h2>
             <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
                 <div class="mb-3">
                     <label class="form-label">Email</label>
-                    <input type="text" class="form-control" formControlName="email">
+                    <input type="text" class="form-control" formControlName="email" >
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Password</label>
-                    <input type="password" class="form-control" formControlName="password">
+                    <input type="password" class="form-control" formControlName="password" >
                 </div>
-                <input type="submit" value="Enviar">
+                <div class="center">
+                    <input class="btnClass" type="submit" value="Enviar">
+
+                </div>
             </form>
         </div>
     </div>
-    <div id="foto" class="middle">
+    <!-- <div id="foto" class="middle">
 
-    </div>
+    </div> -->
 </section>
