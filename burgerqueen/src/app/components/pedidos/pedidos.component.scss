@@ -1,10 +1,14 @@
+.general_container {
+    display: flex;
+    background-color:#795A30;
+}
 .container-fluid {
     background-color:#795A30;
     color: black;
     height: 100vh;
     display: flex !important;
     flex-direction: column;
-    max-width: 25%;
+    max-width: 20%;
     position: relative;
     margin: 0;
 }
@@ -20,9 +24,15 @@
     margin: 20px;
     color: #fff;
     border: none;
-    padding: 10px 10px;
+    padding: 10px 7px;
 }
-
+.btn_pedidos:hover{
+    background-color: #9f773f;
+}
+.btn_pedidos:focus{
+    background-color: #EDD08A ;
+    color: #574431;
+}
 .flex-box {
     display: flex;
 }
@@ -31,6 +41,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 45%;
+    background-color:#fff;
+    
 }
 
 #img-pedido {
@@ -77,6 +90,14 @@
     font-size: 18px;
 }
 
-.general_container {
-    display: flex;
+/* css order pedido */
+.order_pedido{
+    background-color:#795A30;
+    width: 35%;
+    padding: 20px;
+}
+.table_pedidos{
+    background-color: #fff;
+    padding: 5px;
+    margin-top: 20px;
 }

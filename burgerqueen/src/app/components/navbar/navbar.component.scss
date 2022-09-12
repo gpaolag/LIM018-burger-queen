@@ -2,3 +2,19 @@
     background-color:#C29E46 !important;
     color: #fff !important;
 }
+.nav-link {
+    color:#fff !important;
+    font-size: 18px;
+    font-weight: 600;
+}
+.collapse, .navbar-expand-lg, .navbar-expand-lg{
+    display: flex !important;
+    justify-content: center;
+    flex-grow: 3;
+    padding-left: 30px;
+}
+.logo_navbar{
+    width: 50px;
+    border-radius: 50px;
+    box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.35);
+}
