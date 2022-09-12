@@ -1,17 +1,103 @@
-.cotainer-fluid{
-    background-color: palevioletred;
+.general_container {
+    display: flex;
+    background-color:#795A30;
+}
+.container-fluid {
+    background-color:#795A30;
     color: black;
     height: 100vh;
-  
+    display: flex !important;
+    flex-direction: column;
+    max-width: 20%;
+    position: relative;
+    margin: 0;
 }
-.flex-box{
+
+.container-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn_pedidos {
+    background: #AB8A3C;
+    box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.35);
+    margin: 20px;
+    color: #fff;
+    border: none;
+    padding: 10px 7px;
+}
+.btn_pedidos:hover{
+    background-color: #9f773f;
+}
+.btn_pedidos:focus{
+    background-color: #EDD08A ;
+    color: #574431;
+}
+.flex-box {
     display: flex;
 }
-.card-box{
+
+.card-box {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 45%;
+    background-color:#fff;
+    
 }
-#img-pedido{
-    width: 10em;
+
+#img-pedido {
+    max-width: 8em;
+    min-height: 8em;
+    border-radius: 100px;
+    margin-top: -50px;
+    margin-bottom: 10px;
+}
+
+.card {
+    background: #EDD08A !important;
+    --bs-card-border-color: none !important;
+    border: #443527 !important;
+    box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 186px !important;
+    height: 270px;
+    margin: 50px 15px !important;
+    padding-bottom: 20px;
+}
+
+.card p {
+    margin-bottom: 5px !important;
+}
+
+.btn-success {
+    background: #795A30 !important;
+    border: 1px solid #443527 !important;
+    box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.35);
+}
+
+.font-name {
+    font-family: 'Rubik', sans-serif;
+    color: #574431;
+}
+
+.font-price {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+}
+
+/* css order pedido */
+.order_pedido{
+    background-color:#795A30;
+    width: 35%;
+    padding: 20px;
+}
+.table_pedidos{
+    background-color: #fff;
+    padding: 5px;
+    margin-top: 20px;
 }

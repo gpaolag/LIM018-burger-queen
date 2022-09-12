@@ -1,24 +1,88 @@
 <app-navbar></app-navbar>
-<div class="container-fluid text-center">
-    <h1>vista pedidos</h1>
-    <button id="btn_hamburguesa" value="hamburguesas" (click)="typeofCategory('hamburguesas')">Hamburguesas</button>
-    <button id="btn_hamburguesa" value="desayuno" (click)="typeofCategory('desayuno')">Desayunos</button>
-    <button id="btn_hamburguesa" value="acompañamientos"
-        (click)="typeofCategory('acompañamientos')">Acompañamientos</button>
-    <button id="btn_hamburguesa" value="bebidas" (click)="typeofCategory('bebidas')">Bebidas</button>
-</div>
-<div class="card-box">
-    <div *ngFor="let pedido of products" class="card border-success m-3" style="max-width: 18rem;">
-        <div class="card-body">
-            <img id="img-pedido" [src]="pedido.img" />
-            <p>{{pedido.name}}</p>
-            <p> Costo: s/.{{pedido.price}}</p>
-            <!-- <p class="card-text">{{pedido.category}}</p> -->
+<div class="general_container">
+    <div class="container-fluid">
+        <h1></h1>
+        <div class="container-buttons">
+            <button class="btn_pedidos" id="btn_hamburguesa" value="hamburguesas"
+                (click)="typeofCategory('hamburguesas')">Hamburguesas</button>
+            <button class="btn_pedidos" id="btn_hamburguesa" value="desayuno"
+                (click)="typeofCategory('desayuno')">Desayunos</button>
+            <button class="btn_pedidos" id="btn_hamburguesa" value="acompañamientos"
+                (click)="typeofCategory('acompañamientos')">Acompañamientos</button>
+            <button class="btn_pedidos" id="btn_hamburguesa" value="bebidas"
+                (click)="typeofCategory('bebidas')">Bebidas</button>
         </div>
-        <div class="card-footer bg-transparent border-success flex-box">
-            <button type="button" class="btn btn-success">Añadir</button>
-            <h5 class="m-2"> 1 </h5>
-            <button type="button" class="btn btn-danger">Quitar</button>
+    </div>
+    <div class="card-box">
+        <div *ngFor="let pedido of products" class="card border-success m-3" style="max-width: 18rem;">
+            <div class="card-body">
+                <img id="img-pedido" [src]="pedido.img" />
+                <p class="font-name">{{pedido.name}}</p>
+                <p class="font-price"> Costo: s/.{{pedido.price}}</p>
+                <!-- <p class="card-text">{{pedido.category}}</p> -->
+            </div>
+            <div class="card-footer bg-transparent border-success flex-box">
+                <button type="button" class="btn btn-success">Añadir</button>
+            </div>
+        </div>
+    </div>
+    <div class="order_pedido">
+        <h2 style="color:#fff; text-align:center">Lista de Pedidos</h2>
+        <div>
+            <input type="text" placeholder="Nombre del cliente">
+            <input type="number" placeholder="Nro de mesa">
+        </div>
+        <div>
+            <table _ngcontent-yhe-c54="" class="p-5 table table-striped table_pedidos">
+                <thead _ngcontent-yhe-c54="">
+                    <tr _ngcontent-yhe-c54="" class="colorPedido">
+                        <th _ngcontent-yhe-c54="" scope="col">Descripción</th>
+                        <th _ngcontent-yhe-c54="" scope="col">Precio</th>
+                        <th _ngcontent-yhe-c54="" scope="col">Cantidad</th>
+                        <th _ngcontent-yhe-c54="" scope="col">Subtotal</th>
+                        <th _ngcontent-yhe-c54="" scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody _ngcontent-yhe-c54="">
+                    <tr _ngcontent-yhe-c54="">
+                        <th _ngcontent-yhe-c54="">Té negro</th>
+                        <td _ngcontent-yhe-c54="">S/. 15.00</td>
+                        <td _ngcontent-yhe-c54="" class="inputCant">
+                            <div _ngcontent-yhe-c54="" class="input-group input-group-sm mb-1"><button
+                                    _ngcontent-yhe-c54="" type="button" class="btn btn-light btn-sm"> - </button><input
+                                    _ngcontent-yhe-c54="" type="text"
+                                    class="form-control form-control-sm text-center ng-untouched ng-pristine ng-valid"
+                                    disabled="true"><button _ngcontent-yhe-c54="" type="button"
+                                    class="btn btn-light btn-sm"> + </button></div>
+                        </td>
+                        <td _ngcontent-yhe-c54="">S/. 15.00</td>
+                        <td _ngcontent-yhe-c54="" class="cursor"><span class="material-icons">delete</span>
+                        </td>
+                    </tr>
+                    <tr _ngcontent-yhe-c54="">
+                        <th _ngcontent-yhe-c54="">Café con leche</th>
+                        <td _ngcontent-yhe-c54="">S/. 15.00</td>
+                        <td _ngcontent-yhe-c54="" class="inputCant">
+                            <div _ngcontent-yhe-c54="" class="input-group input-group-sm mb-1"><button
+                                    _ngcontent-yhe-c54="" type="button" class="btn btn-light btn-sm"> - </button><input
+                                    _ngcontent-yhe-c54="" type="text"
+                                    class="form-control form-control-sm text-center ng-untouched ng-pristine ng-valid"
+                                    disabled="true"><button _ngcontent-yhe-c54="" type="button"
+                                    class="btn btn-light btn-sm"> + </button></div>
+                        </td>
+                        <td _ngcontent-yhe-c54="">S/. 15.00</td>
+                        <td _ngcontent-yhe-c54="" class="cursor"><img _ngcontent-yhe-c54=""
+                                src="../../../../assets/bxs-trash.png"></td>
+                    </tr>
+                    <!---->
+                </tbody>
+                <thead _ngcontent-yhe-c54="">
+                    <th _ngcontent-yhe-c54="" scope="col">Total</th>
+                    <th _ngcontent-yhe-c54="" scope="col"></th>
+                    <th _ngcontent-yhe-c54="" scope="col">2</th>
+                    <th _ngcontent-yhe-c54="" scope="col">S/. 30.00</th>
+                </thead>
+            </table>
         </div>
     </div>
 </div>
