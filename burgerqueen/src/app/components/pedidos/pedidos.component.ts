@@ -26,8 +26,8 @@ export class PedidosComponent implements OnInit {
     this.products =this.categorias(this.type);
   }
 
-  orderPedido(){
-    console.log(this.pedidos);
-    
+  orderPedido(nombre: string , precio: string){
+    console.log(nombre , precio);
   }
+
 }

@@ -22,7 +22,7 @@
                 <!-- <p class="card-text">{{pedido.category}}</p> -->
             </div>
             <div class="card-footer bg-transparent border-success flex-box">
-                <button type="button" class="btn btn-success">Añadir</button>
+                <button type="button" class="btn btn-success" (click)="orderPedido(pedido.name, pedido.price)">Añadir</button>
             </div>
         </div>
     </div>
