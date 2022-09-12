@@ -28,9 +28,9 @@
     </div>
     <div class="order_pedido">
         <h2 style="color:#fff; text-align:center">Lista de Pedidos</h2>
-        <div>
-            <input type="text" placeholder="Nombre del cliente">
-            <input type="number" placeholder="Nro de mesa">
+        <div >
+            <input  class="inputOrder" id="input_name_user" type="text" placeholder="Nombre del cliente">
+            <input class="inputOrder" id="input_num_table" type="number" placeholder="Nro de mesa">
         </div>
         <div>
             <table _ngcontent-yhe-c54="" class="p-5 table table-striped table_pedidos">
@@ -56,25 +56,11 @@
                                     class="btn btn-light btn-sm"> + </button></div>
                         </td>
                         <td _ngcontent-yhe-c54="">S/. 15.00</td>
-                        <td _ngcontent-yhe-c54="" class="cursor"><span class="material-icons">delete</span>
+                        <td _ngcontent-yhe-c54="" class="cursor">
+                            <i class="material-icons" style="color:rgb(233, 105, 105);">delete</i>
                         </td>
                     </tr>
-                    <tr _ngcontent-yhe-c54="">
-                        <th _ngcontent-yhe-c54="">Café con leche</th>
-                        <td _ngcontent-yhe-c54="">S/. 15.00</td>
-                        <td _ngcontent-yhe-c54="" class="inputCant">
-                            <div _ngcontent-yhe-c54="" class="input-group input-group-sm mb-1"><button
-                                    _ngcontent-yhe-c54="" type="button" class="btn btn-light btn-sm"> - </button><input
-                                    _ngcontent-yhe-c54="" type="text"
-                                    class="form-control form-control-sm text-center ng-untouched ng-pristine ng-valid"
-                                    disabled="true"><button _ngcontent-yhe-c54="" type="button"
-                                    class="btn btn-light btn-sm"> + </button></div>
-                        </td>
-                        <td _ngcontent-yhe-c54="">S/. 15.00</td>
-                        <td _ngcontent-yhe-c54="" class="cursor"><img _ngcontent-yhe-c54=""
-                                src="../../../../assets/bxs-trash.png"></td>
-                    </tr>
-                    <!---->
+                <!---->
                 </tbody>
                 <thead _ngcontent-yhe-c54="">
                     <th _ngcontent-yhe-c54="" scope="col">Total</th>
