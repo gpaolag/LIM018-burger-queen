@@ -14,7 +14,8 @@
         </div>
     </div>
     <div class="card-box">
-        <div *ngFor="let pedido of products" class="card border-success m-3" id="{{pedido.id}}" style="max-width: 18rem;">
+        <div *ngFor="let pedido of products" class="card border-success m-3" id="{{pedido.id}}"
+            style="max-width: 18rem;">
             <div class="card-body">
                 <img id="img-pedido" [src]="pedido.img" />
                 <p class="font-name">{{pedido.name}}</p>
@@ -23,14 +24,15 @@
                 <!-- <p class="card-text">{{pedido.category}}</p> -->
             </div>
             <div class="card-footer bg-transparent border-success flex-box">
-                <button type="button" class="btn btn-success" (click)="orderPedido(pedido.id, pedido.name, pedido.price)">Añadir</button>
+                <button type="button" class="btn btn-success"
+                    (click)="orderPedido(pedido.id, pedido.name, pedido.price)">Añadir</button>
             </div>
         </div>
     </div>
     <div class="order_pedido">
         <h2 style="color:#fff; text-align:center">Lista de Pedidos</h2>
-        <div >
-            <input  class="inputOrder" id="input_name_user" type="text" placeholder="Nombre del cliente">
+        <div>
+            <input class="inputOrder" id="input_name_user" type="text" placeholder="Nombre del cliente">
             <input class="inputOrder" id="input_num_table" type="number" placeholder="Nro de mesa">
         </div>
         <div>
@@ -44,30 +46,30 @@
                         <th _ngcontent-yhe-c54="" scope="col"></th>
                     </tr>
                 </thead>
-                <tbody _ngcontent-yhe-c54="" *ngFor="let orden of arrOrder" >
+                <tbody _ngcontent-yhe-c54="" *ngFor="let orden of arrOrder">
                     <tr _ngcontent-yhe-c54="">
                         <th _ngcontent-yhe-c54="">{{orden.nombre}}</th>
                         <td _ngcontent-yhe-c54="">S/. {{orden.precio}}</td>
                         <td _ngcontent-yhe-c54="" class="inputCant">
                             <div _ngcontent-yhe-c54="" class="input-group input-group-sm mb-1">
-                                <button 
-                                    _ngcontent-yhe-c54="" type="button" class="btn btn-light btn-sm">
-                                     - </button>
-                                <input
-                                    _ngcontent-yhe-c54="" value="{{orden.cantidad}}"type="text"
+                                <button _ngcontent-yhe-c54="" type="button" class="btn btn-light btn-sm"
+                                    (click)="quitarCantidad(orden.nombre)">
+                                    - </button>
+                                <input _ngcontent-yhe-c54="" value="{{orden.cantidad}}" type="text"
                                     class="form-control form-control-sm text-center ng-untouched ng-pristine ng-valid"
                                     disabled="true">
-                                <button _ngcontent-yhe-c54="" type="button"
-                                    class="btn btn-light btn-sm">
-                                 + </button>
+                                <button _ngcontent-yhe-c54="" type="button" class="btn btn-light btn-sm"
+                                    (click)="agregarCantidad(orden.nombre)">
+                                    + </button>
                             </div>
                         </td>
-                        <td _ngcontent-yhe-c54="">S/. 15.00</td>
+                        <td _ngcontent-yhe-c54="">{{orden.subTotal}}</td>
                         <td _ngcontent-yhe-c54="" class="cursor">
-                            <i class="material-icons" style="color:rgb(233, 105, 105);">delete</i>
+                            <button (click)="eliminarProducto(orden.nombre)"><i class="material-icons"
+                                    style="color:rgb(233, 105, 105);">delete</i></button>
                         </td>
                     </tr>
-                <!---->
+                    <!---->
                 </tbody>
                 <thead _ngcontent-yhe-c54="">
                     <th _ngcontent-yhe-c54="" scope="col">Total</th>
