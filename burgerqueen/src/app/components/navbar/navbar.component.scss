@@ -21,3 +21,9 @@
 .navbar-brand{
     text-shadow: 5px 8px 12px rgba(0, 0, 0, 0.35);
 }
+.navbar-nav{
+    flex-direction: row !important;
+}
+.navbar-nav li{
+    padding: 5px 20px;
+}
