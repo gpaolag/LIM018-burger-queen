@@ -18,15 +18,15 @@
 .container-buttons {
     display: flex;
     flex-direction: column;
+    background: #AB8A3C;
 }
 
 .btn_pedidos {
-    background: #AB8A3C;
-    box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.35);
+    background: rgba(121, 90, 48, 0.38);
+box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.35);
     margin: 20px;
     color: #fff;
     border: none;
-    padding: 10px 7px;
 }
 .btn_pedidos:hover{
     background-color: #9f773f;
@@ -50,11 +50,9 @@
 }
 
 #img-pedido {
-    max-width: 8em;
-    min-height: 8em;
+    max-width: 6em;
+    min-height: 6em;
     border-radius: 100px;
-    margin-top: -50px;
-    margin-bottom: 10px;
 }
 
 .card {
@@ -63,14 +61,12 @@
     border: #443527 !important;
     box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.35);
     border-radius: 5px;
-    justify-content: center;
     display: flex;
-    align-items: center;
     text-align: center;
-    width: 186px !important;
-    height: 270px;
-    margin: 50px 15px !important;
-    padding-bottom: 20px;
+    width: 270 !important;
+    height: 186px;
+    margin: 14px 15px !important;
+    padding-bottom: 10px 20px;
 }
 
 .card p {
@@ -78,22 +74,42 @@
 }
 
 .btn-success {
+
+    width: 80%;
     background: #795A30 !important;
     border: 1px solid #443527 !important;
     box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.35);
 }
+.card-footer{
+    display: flex;
+    justify-content: center;
+    padding: 0 0 20px 0;
 
+}
+.box-name-price{
+    width: 50%;
+}
 .font-name {
     font-family: 'Rubik', sans-serif;
     color: #574431;
+    
 }
 
 .font-price {
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
 }
-
-/* css order pedido */
+.card-body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+}
+.category-icon{
+    width: 30px;
+    padding: 5px;
+}
+/********** css order pedido *****************/
 .order_pedido{
     background-color:#795A30;
     width: 50%;
