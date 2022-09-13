@@ -16,6 +16,8 @@
 }
 
 .container-buttons {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     background: #AB8A3C;
@@ -42,8 +44,8 @@ box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.35);
 .card-box {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    width: 40%;
+    justify-content:space-evenly;
+    width: 50%;
     background-color:#fff;
     border-radius: 10px;
     filter: drop-shadow(5px 4px 8px rgba(0, 0, 0, 0.25));
@@ -111,8 +113,9 @@ box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.35);
 }
 /********** css order pedido *****************/
 .order_pedido{
-    background-color:#795A30;
-    width: 50%;
+    margin: 0 10px 10px 10px;
+    background-color:#fff;
+    width: 40%;
     padding: 20px;
 }
 .table_pedidos{
@@ -126,13 +129,19 @@ box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.35);
     border-radius: 8px;
     border: #795A30;
     outline: none;
-    padding: .3em;
+    padding: .5em;
+    background-color: #ebd5b6;
+
 }
 #input_name_user{
     width:60% ;
+    
 }
 #input_num_table{
     width: 26.5%;
     margin-left: 13%;
 
 }
+.solid {
+    border-top: 3px solid #795A30;
+  }
