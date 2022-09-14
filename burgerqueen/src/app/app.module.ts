@@ -17,8 +17,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavbaradminComponent } from './components/navbaradmin/navbaradmin.component';
 import { ProductosComponent } from './components/productos/productos.component';
-
-
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
  
 @NgModule({
   declarations: [
@@ -29,14 +28,15 @@ import { ProductosComponent } from './components/productos/productos.component';
     HistorialPedidosComponent,
     LoginComponent,
     NavbaradminComponent,
-    ProductosComponent
+    ProductosComponent,
    ],
   imports: [
     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth())
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]

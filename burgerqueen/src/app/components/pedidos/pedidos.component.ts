@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import listadePedidos from 'src/assets/json/data.json';
+import { PedidoService } from 'src/app/services/pedido.service';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class PedidosComponent implements OnInit {
   @Input() totalOrder: number = 0;
 
 
-  constructor() { }
+  constructor(private pedidosService: PedidoService) { }
 
   ngOnInit(): void {
   }
@@ -28,11 +29,11 @@ export class PedidosComponent implements OnInit {
     this.type = value;
     this.products = this.categorias(this.type);
   }
-  totalPedido(){
-    this.totalOrder=0;
-    this.arrOrder.forEach((elemento) =>{
-      this.totalOrder+=parseInt(elemento.subTotal);
-    });  
+  totalPedido() {
+    this.totalOrder = 0;
+    this.arrOrder.forEach((elemento) => {
+      this.totalOrder += parseInt(elemento.subTotal);
+    });
   }
 
   orderPedido(identrante: string, nombre: string, precio: string) {
@@ -45,7 +46,7 @@ export class PedidosComponent implements OnInit {
       }
       return false;
     });
-    if (filtrado == false){
+    if (filtrado == false) {
       this.arrOrder.push({
         id: identrante,
         nombre: nombre,
@@ -56,7 +57,7 @@ export class PedidosComponent implements OnInit {
       this.totalPedido();
     }
   }
-  eliminarProducto(nombre: string){
+  eliminarProducto(nombre: string) {
     let filtrar: any = this.arrOrder.filter((elem, indice) => {
       if (elem.nombre === nombre) {
         this.arrOrder.splice(indice, 1);
@@ -66,7 +67,7 @@ export class PedidosComponent implements OnInit {
       return false;
     });
   }
-  agregarCantidad(nombre: string){
+  agregarCantidad(nombre: string) {
     let filtrar: any = this.arrOrder.filter((elem, indice) => {
       if (elem.nombre === nombre) {
         this.arrOrder[indice].cantidad += 1;
@@ -77,13 +78,13 @@ export class PedidosComponent implements OnInit {
       return false;
     });
   }
-  quitarCantidad(nombre: string){
+  quitarCantidad(nombre: string) {
     let filtrar: any = this.arrOrder.filter((elem, indice) => {
       if (elem.nombre === nombre) {
         this.arrOrder[indice].cantidad -= 1;
         this.arrOrder[indice].subTotal -= parseInt(this.arrOrder[indice].precio);
         this.totalPedido();
-        if (this.arrOrder[indice].cantidad==0){
+        if (this.arrOrder[indice].cantidad == 0) {
           this.eliminarProducto(nombre);
           this.totalPedido();
         }
@@ -94,12 +95,24 @@ export class PedidosComponent implements OnInit {
   }
 
   //metodos de pedidos 
-  cancelarPedido(){    
-    this.arrOrder=[];
+  cancelarPedido() {
+    this.arrOrder = [];
     this.totalPedido();
   }
-  enviarPedido(){    
-    this.arrOrder=[];
-    this.totalPedido();
+  async enviarPedido() {
+    let ordernew = {
+      arrOrder: this.arrOrder,
+      totalOrder: this.totalOrder,
+      status: 'pendiente',
+      dateCreation: new Date().toString(),
+      beginPreparation: '',
+      endPreparation: '',
+      timePreparation: '',
+      dateDeliver: '',
+      dateCancel: ''
+    };
+    const resp = await this.pedidosService.addOrden(ordernew);
+    console.log(resp);
+
   }
 }
