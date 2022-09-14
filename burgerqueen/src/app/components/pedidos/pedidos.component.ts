@@ -15,6 +15,7 @@ export class PedidosComponent implements OnInit {
   @Input() arrOrder: any[] = [];
   @Input() totalOrder: number = 0;
 
+  name: string = '';
 
   constructor(private pedidosService: PedidoService) { }
 
@@ -52,8 +53,10 @@ export class PedidosComponent implements OnInit {
         nombre: nombre,
         precio: precio,
         cantidad: 1,
-        subTotal: parseInt(precio)
+        subTotal: parseInt(precio),
       });
+      console.log(this.arrOrder);
+      
       this.totalPedido();
     }
   }
@@ -98,9 +101,14 @@ export class PedidosComponent implements OnInit {
   cancelarPedido() {
     this.arrOrder = [];
     this.totalPedido();
+    this.name = 'adsad'
+    console.log(this.name);  
+
+   
   }
-  
-  async enviarPedido() {
+
+ 
+  async enviarPedido(name: string) {
     let ordernew = {
       arrOrder: this.arrOrder,
       totalOrder: this.totalOrder,
@@ -110,10 +118,12 @@ export class PedidosComponent implements OnInit {
       endPreparation: '',
       timePreparation: '',
       dateDeliver: '',
-      dateCancel: ''
+      dateCancel: '',
+      nameCliente: name
     };
     const resp = await this.pedidosService.addOrden(ordernew);
     console.log(resp);
+    this.cancelarPedido();
 
   }
 }

@@ -1,4 +1,24 @@
 <app-navbar></app-navbar>
 <div class="container-fluid text-center">
     <h1>vista control pedidos</h1>
+    <div>
+        <div *ngFor="let orden of arrListOrders" class="card border-success m-3"  style="max-width: 18rem;">
+        <div class="card-body flex-box">            
+            <div class="box-name-price">
+                <p class="font-name">Cliente: {{orden.nameCliente}}</p>
+                <p class="font-name">Total de Productos: {{orden.arrOrder.length}}</p>
+
+                <div *ngFor="let pedidos of orden.arrOrder">
+                    <p class="font-name">{{pedidos.cantidad}} {{pedidos.nombre}}</p>
+                </div>
+               
+            </div>
+
+            <!-- <p class="card-text">{{pedido.category}}</p> -->
+        </div>
+        <div class="card-footer bg-transparent border-success flex-box">
+            <button type="button" class="btn btn-success">Añadir</button>
+        </div>
+    </div>
+    </div>
 </div>

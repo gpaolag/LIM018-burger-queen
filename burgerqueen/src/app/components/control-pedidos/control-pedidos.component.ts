@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PedidoService } from 'src/app/services/pedido.service';
+import { Orden } from '../pedidos/orden';
 
 @Component({
   selector: 'app-control-pedidos',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ControlPedidosComponent implements OnInit {
 
-  constructor() { }
+  arrListOrders: Orden[] = [];
+  constructor(private orderService:PedidoService) { }
 
   ngOnInit(): void {
+   this.orderService.getOrders().subscribe(order => {
+    this.arrListOrders =  order;
+  
+      
+    })
+    
   }
+
+
 
 }

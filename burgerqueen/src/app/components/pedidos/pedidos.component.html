@@ -39,9 +39,8 @@
     </div>
     <div class="order_pedido">
         <h3 style="text-align:center">Lista de Pedidos</h3>
-        <div>
-            <input class="inputOrder" id="input_name_user" type="text" placeholder="Nombre del cliente">
-            <input class="inputOrder" id="input_num_table" type="number" placeholder="Nro de mesa">
+        <div  ng-app="myApp" ng-controller="myCtrl">
+            <input ngmodel="name"  #nameCliente   class="inputOrder" placeholder="Nombre del cliente" >
         </div>
         <hr class="solid">
         <div>
@@ -91,7 +90,7 @@
             </table>
         </div>
         <div class="btn_accesos">
-            <button type="button" class="btn btn-envio" (click)="enviarPedido()">
+            <button type="button" class="btn btn-envio" (click)="enviarPedido(nameCliente.value)">
                 Enviar Pedido
             </button>
             <button class="btn btn-danger" type="button" (click)="cancelarPedido()">

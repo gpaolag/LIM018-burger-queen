@@ -8,6 +8,7 @@ import { ControlPedidosComponent } from './components/control-pedidos/control-pe
 import { HistorialPedidosComponent } from './components/historial-pedidos/historial-pedidos.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProductosComponent } from './components/productos/productos.component';
+import { CocineroComponent } from './components/cocina/cocinero/cocinero.component';
 
 //array de rutas
 const routes: Routes = [
@@ -16,7 +17,10 @@ const routes: Routes = [
   {path:'controlPedidos', component: ControlPedidosComponent},
   {path:'historialPedidos', component: HistorialPedidosComponent},
   {path:'productos', component: ProductosComponent},
-  {path:'**', redirectTo:'pedidos', pathMatch:'full'}
+  {path:'cocina', component: CocineroComponent},
+  {path:'**', redirectTo:'pedidos', pathMatch:'full'},
+ 
+
 ];
 
 //exportar el modulo

@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NavbaradminComponent } from './components/navbaradmin/navbaradmin.component';
 import { ProductosComponent } from './components/productos/productos.component';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { CocineroComponent } from './components/cocina/cocinero/cocinero.component';
  
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     LoginComponent,
     NavbaradminComponent,
     ProductosComponent,
+    CocineroComponent,
    ],
   imports: [
     ReactiveFormsModule,

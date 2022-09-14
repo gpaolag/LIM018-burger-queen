@@ -33,7 +33,10 @@ export class LoginComponent implements OnInit {
         }
         else if(/coffeedream2.com/.test(emailuser)){
           this.router.navigate(['pedidos']);
+        }  else if(/coffeedream3.com/.test(emailuser)){
+          this.router.navigate(['cocina']);
         }
+        
       })
       .catch((error: any) => console.log(error));
   }
