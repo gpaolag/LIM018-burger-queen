@@ -21,6 +21,7 @@
     display: flex;
     flex-direction: column;
     background: #AB8A3C;
+    margin: 0;
 }
 
 .btn_pedidos {
@@ -45,7 +46,7 @@ box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.35);
     display: flex;
     flex-wrap: wrap;
     justify-content:space-evenly;
-    width: 50%;
+    width: 40%;
     background-color:#fff;
     border-radius: 10px;
     filter: drop-shadow(5px 4px 8px rgba(0, 0, 0, 0.25));
@@ -115,7 +116,7 @@ box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.35);
 .order_pedido{
     margin: 0 10px 10px 10px;
     background-color:#fff;
-    width: 40%;
+    width: 45%;
     padding: 20px;
 }
 .table_pedidos{
