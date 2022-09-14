@@ -81,5 +81,4 @@ export class PedidosComponent implements OnInit {
     });
   }
 
-
 }
