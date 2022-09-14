@@ -32,7 +32,7 @@
         },
         {
             "id" : "5",
-            "name" : "Hamburguesa simple",
+            "name" : "Hamburguesa simple de pollo",
             "price" : "10",
             "category": "hamburguesas",
             "img" : "https://ciempizzas.es/wp-content/uploads/2022/04/Normal.jpg"
@@ -40,12 +40,13 @@
         },
         {
             "id" : "6",
-            "name" : "Hamburguesa doble",
+            "name" : "Hamburguesa doble de pollo",
             "price" : "15",
             "category": "hamburguesas",
             "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
 
         },
+        
         {
             "id" : "7",
             "name" : "Papas fritas",
@@ -92,6 +93,54 @@
             "price" : "10",
             "category": "bebidas",
             "img" : "https://chely.pe/wp-content/uploads/2019/01/PEPSI-X-1.5-L.jpg"
+
+        },
+        {
+            "id" : "13",
+            "name" : "Hamburguesa doble de Res",
+            "price" : "15",
+            "category": "hamburguesas",
+            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+
+        },
+        {
+            "id" : "14",
+            "name" : "Hamburguesa simple de Res",
+            "price" : "15",
+            "category": "hamburguesas",
+            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+
+        },
+        {
+            "id" : "15",
+            "name" : "Hamburguesa doble vegetariana",
+            "price" : "15",
+            "category": "hamburguesas",
+            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+
+        },
+        {
+            "id" : "16",
+            "name" : "Hamburguesa simple vegetariana",
+            "price" : "15",
+            "category": "hamburguesas",
+            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+
+        },
+        {
+            "id" : "17",
+            "name" : "Queso",
+            "price" : "1",
+            "category": "hamburguesas",
+            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
+
+        },
+        {
+            "id" : "18",
+            "name" : "Huevo",
+            "price" : "1",
+            "category": "hamburguesas",
+            "img" : "https://www.lajoyadelcafe.com/wp-content/uploads/2020/11/32236-emre-gencer-364602-unsplash-1.jpg"
 
         }
 ]
