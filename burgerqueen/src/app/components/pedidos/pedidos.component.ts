@@ -12,6 +12,7 @@ export class PedidosComponent implements OnInit {
   @Input() type: string = '';
   @Input() products: any = this.pedidos;
   @Input() arrOrder: any[] = [];
+  @Input() totalOrder: number = 0;
 
 
   constructor() { }
@@ -27,12 +28,19 @@ export class PedidosComponent implements OnInit {
     this.type = value;
     this.products = this.categorias(this.type);
   }
+  totalPedido(){
+    this.totalOrder=0;
+    this.arrOrder.forEach((elemento) =>{
+      this.totalOrder+=parseInt(elemento.subTotal);
+    });  
+  }
 
   orderPedido(identrante: string, nombre: string, precio: string) {
     let filtrado: any = this.arrOrder.filter((elem, indice) => {
       if (elem.id === identrante) {
         this.arrOrder[indice].cantidad += 1;
         this.arrOrder[indice].subTotal += parseInt(this.arrOrder[indice].precio);
+        this.totalPedido();
         return true;
       }
       return false;
@@ -45,12 +53,14 @@ export class PedidosComponent implements OnInit {
         cantidad: 1,
         subTotal: parseInt(precio)
       });
+      this.totalPedido();
     }
   }
   eliminarProducto(nombre: string){
     let filtrar: any = this.arrOrder.filter((elem, indice) => {
       if (elem.nombre === nombre) {
         this.arrOrder.splice(indice, 1);
+        this.totalPedido();
         return true;
       }
       return false;
@@ -61,19 +71,21 @@ export class PedidosComponent implements OnInit {
       if (elem.nombre === nombre) {
         this.arrOrder[indice].cantidad += 1;
         this.arrOrder[indice].subTotal += parseInt(this.arrOrder[indice].precio);
+        this.totalPedido();
         return true;
       }
       return false;
     });
-    console.log(this.arrOrder);
   }
   quitarCantidad(nombre: string){
     let filtrar: any = this.arrOrder.filter((elem, indice) => {
       if (elem.nombre === nombre) {
         this.arrOrder[indice].cantidad -= 1;
         this.arrOrder[indice].subTotal -= parseInt(this.arrOrder[indice].precio);
+        this.totalPedido();
         if (this.arrOrder[indice].cantidad==0){
           this.eliminarProducto(nombre);
+          this.totalPedido();
         }
         return true;
       }
@@ -81,5 +93,13 @@ export class PedidosComponent implements OnInit {
     });
   }
 
-
+  //metodos de pedidos 
+  cancelarPedido(){    
+    this.arrOrder=[];
+    this.totalPedido();
+  }
+  enviarPedido(){    
+    this.arrOrder=[];
+    this.totalPedido();
+  }
 }

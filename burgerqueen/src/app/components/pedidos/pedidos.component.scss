@@ -1,18 +1,20 @@
 .general_container {
     display: flex;
-    background-color:#795A30;
+    background-color: #795A30;
     padding-top: 30px;
     padding-bottom: 20px;
 }
+
 .container-fluid {
-    background-color:#795A30;
+    background-color: #795A30;
     color: black;
-    height: 100vh;
+    height: 48vh;
     display: flex !important;
     flex-direction: column;
     max-width: 10%;
     position: relative;
     margin: 0;
+    padding: 0 20px 10px 0;
 }
 
 .container-buttons {
@@ -26,18 +28,21 @@
 
 .btn_pedidos {
     background: rgba(121, 90, 48, 0.38);
-box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.35);
+    box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.35);
     margin: 20px;
     color: #fff;
     border: none;
 }
-.btn_pedidos:hover{
+
+.btn_pedidos:hover {
     background-color: #9f773f;
 }
-.btn_pedidos:focus{
-    background-color: #EDD08A ;
+
+.btn_pedidos:focus {
+    background-color: #EDD08A;
     color: #574431;
 }
+
 .flex-box {
     display: flex;
 }
@@ -45,9 +50,9 @@ box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.35);
 .card-box {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     width: 40%;
-    background-color:#fff;
+    background-color: #fff;
     border-radius: 10px;
     filter: drop-shadow(5px 4px 8px rgba(0, 0, 0, 0.25));
 }
@@ -83,49 +88,56 @@ box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.35);
     border: 1px solid #443527 !important;
     box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.35);
 }
-.card-footer{
+
+.card-footer {
     display: flex;
     justify-content: center;
     padding: 0 0 20px 0;
 
 }
-.box-name-price{
+
+.box-name-price {
     width: 50%;
 }
+
 .font-name {
     font-family: 'Rubik', sans-serif;
     color: #574431;
-    
+
 }
 
 .font-price {
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
 }
-.card-body{
+
+.card-body {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 0;
 }
-.category-icon{
+
+.category-icon {
     width: 30px;
     padding: 5px;
 }
+
 /********** css order pedido *****************/
-.order_pedido{
+.order_pedido {
     margin: 0 10px 10px 10px;
-    background-color:#fff;
+    background-color: #fff;
     width: 45%;
     padding: 20px;
 }
-.table_pedidos{
+
+.table_pedidos {
     background-color: #fff;
     padding: 5px;
     margin-top: 20px;
 }
 
-.inputOrder{
+.inputOrder {
     margin: 1em 0 1em 0;
     border-radius: 8px;
     border: #795A30;
@@ -134,15 +146,47 @@ box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.35);
     background-color: #ebd5b6;
 
 }
-#input_name_user{
-    width:60% ;
-    
+
+#input_name_user {
+    width: 60%;
+
 }
-#input_num_table{
+
+#input_num_table {
     width: 26.5%;
     margin-left: 13%;
 
 }
+
 .solid {
     border-top: 3px solid #795A30;
-  }
+}
+
+.spaceTotal {
+    background-color: #795A30;
+    padding: 5px;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* botones de envio o cancelar */
+
+.btn_accesos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.btn-envio {
+    background-color: #4cbb59;
+    font-weight: 600;
+    font-size: 18px;
+    text-shadow: 1px 1px 5px #fff;
+}
+.btn-danger{
+    font-weight: 600;
+    font-size: 18px;
+    color: #090909;
+    text-shadow: 1px 1px 5px #fff;
+}
