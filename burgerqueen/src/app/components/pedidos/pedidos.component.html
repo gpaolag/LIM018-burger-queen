@@ -3,20 +3,16 @@
     <div class="container-fluid">
         <h1></h1>
         <div class="container-buttons">
-            <button class="btn_pedidos"  value="hamburguesas"
-                (click)="typeofCategory('hamburguesas')">
+            <button class="btn_pedidos" value="hamburguesas" (click)="typeofCategory('hamburguesas')">
                 <img class="category-icon" src="https://cdn-icons-png.flaticon.com/512/657/657481.png">
             </button>
-            <button class="btn_pedidos" value="desayuno"
-                (click)="typeofCategory('desayuno')">
-                <img class="category-icon" src="https://cdn-icons-png.flaticon.com/512/2366/2366631.png">            
+            <button class="btn_pedidos" value="desayuno" (click)="typeofCategory('desayuno')">
+                <img class="category-icon" src="https://cdn-icons-png.flaticon.com/512/2366/2366631.png">
             </button>
-            <button class="btn_pedidos"  value="acompañamientos"
-                (click)="typeofCategory('acompañamientos')">
+            <button class="btn_pedidos" value="acompañamientos" (click)="typeofCategory('acompañamientos')">
                 <img class="category-icon" src="https://cdn-icons-png.flaticon.com/512/3259/3259072.png">
             </button>
-            <button class="btn_pedidos"  value="bebidas"
-                (click)="typeofCategory('bebidas')">
+            <button class="btn_pedidos" value="bebidas" (click)="typeofCategory('bebidas')">
                 <img class="category-icon" src="https://cdn-icons-png.flaticon.com/512/712/712030.png">
             </button>
         </div>
@@ -25,13 +21,13 @@
         <div *ngFor="let pedido of products" class="card border-success m-3" id="{{pedido.id}}"
             style="max-width: 18rem;">
             <div class="card-body flex-box">
-                <div >
+                <div>
                     <img id="img-pedido" [src]="pedido.img" />
                 </div>
                 <div class="box-name-price">
                     <p class="font-name">{{pedido.name}}</p>
                     <p class="font-price"> Costo: s/.{{pedido.price}}</p>
-                </div>             
+                </div>
 
                 <!-- <p class="card-text">{{pedido.category}}</p> -->
             </div>
@@ -86,13 +82,21 @@
                     <!---->
                 </tbody>
                 <hr class="solid">
-                <thead _ngcontent-yhe-c54="">
-                    <th _ngcontent-yhe-c54="" scope="col">Total</th>
-                    <th _ngcontent-yhe-c54="" scope="col"></th>
-                    <th _ngcontent-yhe-c54="" scope="col">2</th>
-                    <th _ngcontent-yhe-c54="" scope="col">S/. 35.00</th>
+                <thead _ngcontent-yhe-c54="" class="spaceTotal">
+                    <th _ngcontent-yhe-c54="" scope="col" class="spaceTotal">Total</th>
+                    <th _ngcontent-yhe-c54="" scope="col" class="spaceTotal"></th>
+                    <th _ngcontent-yhe-c54="" scope="col" class="spaceTotal"></th>
+                    <th _ngcontent-yhe-c54="" scope="col" class="spaceTotal">{{totalOrder}}</th>
                 </thead>
             </table>
+        </div>
+        <div class="btn_accesos">
+            <button type="button" class="btn btn-envio" (click)="enviarPedido()">
+                Enviar Pedido
+            </button>
+            <button class="btn btn-danger" type="button" (click)="cancelarPedido()">
+                Cancelar
+            </button>
         </div>
     </div>
 </div>
