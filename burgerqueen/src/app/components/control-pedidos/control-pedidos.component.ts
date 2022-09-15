@@ -9,7 +9,7 @@ import { Orden } from '../pedidos/orden';
 })
 export class ControlPedidosComponent implements OnInit {
 
-  arrListOrders: Orden[] = [];
+  public arrListOrders: Orden[] = [];
   constructor(private orderService:PedidoService) { }
 
   ngOnInit(): void {

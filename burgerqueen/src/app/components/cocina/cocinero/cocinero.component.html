@@ -1,3 +1,92 @@
-<p>cocinero works!</p>
-<header>CONTROL DE PEDIDOS</header>
-<div></div>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="box-logo">
+            <a class="navbar-brand" routerLink="/login">Coffee Dream</a>
+        </div>
+        <div class="box-item">
+            <a class="nav-link">Control de Pedidos</a>
+        </div>
+    </nav>
+</header>
+<div class="box-estados">
+
+    <!-- pedidos pendientes -->
+    <div class="box-pedidos ">
+        <p>PENDIENTES</p>
+        <div class="container-fluid text-center">
+            <div>
+                <div *ngFor="let orden of arrPending" class="card border-danger" style="max-width: 18rem;">
+                    <div class="card-body flex-box">
+                        <div class="box-name-price">
+                            <p class="font-name">Cliente: {{orden.nameCliente}}</p>
+                            <p class="font-name">Total de Productos: {{orden.arrOrder.length}}</p>
+
+                            <div *ngFor="let pedidos of orden.arrOrder">
+                                <p class="font-name">{{pedidos.cantidad}} {{pedidos.nombre}}</p>
+                            </div>
+
+                        </div>
+                        <div class="card-footer bg-transparent border-danger flex-box">
+                            <button type="button" class="btn btn-danger" (click)="statusPreparing(orden)">Preparar</button>
+                        </div>
+                        <!-- <p class="card-text">{{pedido.category}}</p> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- cambiar estado de en preparacion a preparado -->
+    <div class="box-pedidos">
+        EN PREPARACIÓN
+        <div class="container-fluid text-center">
+            <div>
+                <div *ngFor="let orden of arrPreparing" class="card border-danger" style="max-width: 18rem;">
+                    <div class="card-body flex-box">
+                        <div class="box-name-price">
+                            <p class="font-name">Cliente: {{orden.nameCliente}}</p>
+                            <p class="font-name">Total de Productos: {{orden.arrOrder.length}}</p>
+
+                            <div *ngFor="let pedidos of orden.arrOrder">
+                                <p class="font-name">{{pedidos.cantidad}} {{pedidos.nombre}}</p>
+                            </div>
+
+                        </div>
+                        <div class="card-footer bg-transparent border-danger flex-box">
+                            <button type="button" class="btn btn-danger" (click)="statusPreparing(orden)">Preparar</button>
+                        </div>
+                        <!-- <p class="card-text">{{pedido.category}}</p> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- observar pedidos cancelados -->
+    <div class="box-pedidos">CANCELADO
+        <div class="container-fluid text-center">
+            <div>
+                <div *ngFor="let orden of arrCancel" class="card border-danger" style="max-width: 18rem;">
+                    <div class="card-body flex-box">
+                        <div class="box-name-price">
+                            <p class="font-name">Cliente: {{orden.nameCliente}}</p>
+                            <p class="font-name">Total de Productos: {{orden.arrOrder.length}}</p>
+
+                            <div *ngFor="let pedidos of orden.arrOrder">
+                                <p class="font-name">{{pedidos.cantidad}} {{pedidos.nombre}}</p>
+                            </div>
+
+                        </div>
+                        <div class="card-footer bg-transparent border-danger flex-box">
+                            <button type="button" class="btn btn-danger" (click)="statusPreparing(orden)">Preparar</button>
+                        </div>
+                        <!-- <p class="card-text">{{pedido.category}}</p> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
