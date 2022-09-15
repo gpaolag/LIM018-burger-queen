@@ -35,7 +35,7 @@ export class CocineroComponent implements OnInit {
         this.arrPending.push(e);
       }else if(e.status=='preparando'){
         this.arrPreparing.push(e);
-      }else{
+      }else if(e.status=='cancelado'){
         this.arrCancel.push(e);
       }
     })
@@ -49,6 +49,13 @@ export class CocineroComponent implements OnInit {
       orden.status = 'preparando';
       orden.beginPreparation = fechaInicioPreparacion;
       console.log('nuevo valor  ',orden);  
+      this.filtrarStatus();    
+  }
+  statusPrepared(orden: Orden){
+    let fechaInicioPreparacion= new Date().toString();
+      this.orderService.updateStatusOrder(orden, 'preparado', fechaInicioPreparacion);
+      orden.status = 'preparado';
+      orden.beginPreparation = fechaInicioPreparacion;
       this.filtrarStatus();    
   }
 
