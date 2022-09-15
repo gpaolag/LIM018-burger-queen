@@ -27,7 +27,8 @@
 
                         </div>
                         <div class="card-footer bg-transparent border-danger flex-box">
-                            <button type="button" class="btn btn-danger" (click)="statusPreparing(orden)">Preparar</button>
+                            <button type="button" class="btn btn-danger"
+                                (click)="statusPreparing(orden)">Preparar</button>
                         </div>
                         <!-- <p class="card-text">{{pedido.category}}</p> -->
                     </div>
@@ -54,7 +55,8 @@
 
                         </div>
                         <div class="card-footer bg-transparent border-danger flex-box">
-                            <button type="button" class="btn btn-danger" (click)="statusPreparing(orden)">Preparar</button>
+                            <button type="button" class="btn btn-success"
+                                (click)="statusPrepared(orden)">Entregar</button>
                         </div>
                         <!-- <p class="card-text">{{pedido.category}}</p> -->
                     </div>
@@ -64,7 +66,6 @@
         </div>
     </div>
 
-    <!-- observar pedidos cancelados -->
     <div class="box-pedidos">CANCELADO
         <div class="container-fluid text-center">
             <div>
@@ -78,9 +79,6 @@
                                 <p class="font-name">{{pedidos.cantidad}} {{pedidos.nombre}}</p>
                             </div>
 
-                        </div>
-                        <div class="card-footer bg-transparent border-danger flex-box">
-                            <button type="button" class="btn btn-danger" (click)="statusPreparing(orden)">Preparar</button>
                         </div>
                         <!-- <p class="card-text">{{pedido.category}}</p> -->
                     </div>
