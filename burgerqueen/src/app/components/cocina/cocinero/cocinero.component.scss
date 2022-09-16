@@ -1,6 +1,7 @@
 .bg-primary{
     background-color:#C29E46 !important;
     color: #fff !important;
+    padding:1em;
 }
 
 .nav-link {
@@ -26,10 +27,64 @@
 // Estados del pedido
 .box-estados{
     display: flex;
-    padding: 1em;
     justify-content: center;
-    background-color:rgb(218, 172, 139);
+    background-color:#795A30;
+    height: 100%;
 }
 .box-pedidos{
     width: 33.33%;
+    
+}
+// pedidos pendientes
+.titlePending{
+    padding: 0.5em;
+    background-color: #F27227;
+}
+.titlePending p{
+    text-align: center;
+    color: #fff;
+}
+#preparationTitle{
+    background-color: #2C926A;
+}
+#cancelTitle{
+    background-color: #CE1932;
+}
+// lineas verticales de division
+
+.v-line{
+    border-left:  solid #fff;
+    height:100%;
+    left: 33.33%;
+    position: absolute;
+   }
+.v-line2{
+    border-left:  solid #fff;
+    height:100%;
+    left: 66.66%;
+    position: absolute;
+}
+
+// estilos para los card
+.card{
+    padding: .5em;
+    margin: 1em;
+    width: 80%;
+}
+.card-body{
+    padding: 0;
+}
+.box-name-price p{
+
+    width: 20%;
+}
+.box-name-price p{
+    width: 100%;
+}
+.container-fluid{
+    display: flex;
+    justify-content: center;
+}
+.nameFonweight{
+    font-weight: 800;
 }

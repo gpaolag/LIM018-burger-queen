@@ -1,6 +1,7 @@
 .bg-primary{
     background-color:#C29E46 !important;
     color: #fff !important;
+
 }
 
 .nav-link {
@@ -26,10 +27,85 @@
 // Estados del pedido
 .box-estados{
     display: flex;
-    padding: 1em;
     justify-content: center;
-    background-color:rgb(218, 172, 139);
+    background-color:#795A30;
+  
 }
 .box-pedidos{
     width: 33.33%;
+}
+// lineas de verticales
+.v-line{
+    border-left:  solid #fff;
+    height:9%;
+    left: 33.33%;
+    position: absolute;
+   }
+.v-line2{
+    border-left:  solid #fff;
+    height:9%;
+    left: 66.66%;
+    position: absolute;
+}
+.v-line3{
+    border-left:  solid #fff;
+    height:9%;
+    left: 50%;
+    position: absolute;
+}
+// pedidos pendientes
+.titlePending{
+    padding: 0.5em;
+    background-color: #F27227;
+    text-align: center;
+}
+.titlePending p{
+    text-align: center;
+    color: #fff;
+}
+#preparationTitle{
+    background-color: #F39E22;
+}
+#preparadosTitle{
+    background-color: #0A7ABA;
+}
+#entregadosTitle{
+    background-color: #32AA7C;
+}
+#cancelTitle{
+    background-color: #CE1932;
+
+}
+// lista de pedidos entregados y cancelados
+.box-estados2{
+    background-color:#795A30;
+    display: flex;
+    justify-content: center;
+}
+.box-pedidos2{
+    width: 50%;
+}
+// estilos del card
+.card{
+    padding: .5em;
+    margin: 1em;
+    width: 100%;
+}
+
+.card-body{
+    padding: 0;
+}
+.box-name-price p{
+
+    width: 20%;
+}
+.box-name-price p{
+    width: 100%;
+}
+.container-fluid{
+    display: flex;
+    justify-content: center;
+}
+.nameFonweight{
+    font-weight: 800;
 }
