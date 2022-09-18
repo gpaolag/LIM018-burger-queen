@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import listadePedidos from 'src/assets/json/data.json';
 import { PedidoService } from 'src/app/services/pedido.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -17,7 +18,8 @@ export class PedidosComponent implements OnInit {
 
   name: string = '';
 
-  constructor(private pedidosService: PedidoService) { }
+  constructor(private pedidosService: PedidoService,
+    private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -122,8 +124,8 @@ export class PedidosComponent implements OnInit {
       nameCliente: name
     };
     const resp = await this.pedidosService.addOrden(ordernew);
-    console.log(resp);
     this.cancelarPedido();
+    this.router.navigate(['/controlPedidos']);
 
   }
 }
