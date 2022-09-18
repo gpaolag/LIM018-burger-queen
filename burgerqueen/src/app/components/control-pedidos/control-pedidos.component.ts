@@ -45,21 +45,20 @@ export class ControlPedidosComponent implements OnInit {
         this.arrCancel.push(e);
       }
     })
-    console.log(this.arrPreparing, ' arr cal', this.arrCancel);
   }
 
   statusCancel(orden: Orden){
-    let fechaInicioPreparacion= new Date().toString();
-      this.orderService.updateStatusOrder(orden, 'cancelado', fechaInicioPreparacion);
+    let fechaCanceladoPreparacion= new Date().toLocaleTimeString() + ' - '+ new Date().toLocaleDateString();
+      this.orderService.updateStatusCancel(orden, 'cancelado', fechaCanceladoPreparacion);
       orden.status = 'cancelado';
-      orden.beginPreparation = fechaInicioPreparacion;
+      orden.beginPreparation = fechaCanceladoPreparacion;
       this.filtrarStatus();    
   }
   statusDeliver(orden: Orden){
-    let fechaInicioPreparacion= new Date().toString();
-      this.orderService.updateStatusOrder(orden, 'entregado', fechaInicioPreparacion);
+    let fechaentregaPreparacion= new Date().toLocaleTimeString() + ' - '+ new Date().toLocaleDateString();
+      this.orderService.updateStatusDeliver(orden, 'entregado', fechaentregaPreparacion);
       orden.status = 'entregado';
-      orden.beginPreparation = fechaInicioPreparacion; 
+      orden.beginPreparation = fechaentregaPreparacion; 
       this.filtrarStatus();    
   }
 

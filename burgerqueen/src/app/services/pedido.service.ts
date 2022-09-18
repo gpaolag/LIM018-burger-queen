@@ -23,9 +23,27 @@ export class PedidoService {
     const ordenRef = collection(this.firestore, 'ordens');
     return collectionData(ordenRef, {idField: 'id'}) as Observable<Orden[]>;
   }
-  
+  // Inicio de preparacion
   updateStatusOrder(order: Orden, statusValue: string, begin:string):Promise<any>{
     const docRef = doc(this.firestore, "ordens", String(order.id));    
     return updateDoc(docRef,{status: statusValue, beginPreparation:begin})
+  }
+
+  // Fin de preparacion
+  updateStatusEnd(order: Orden, statusValue: string, end:string):Promise<any>{
+    const docRef = doc(this.firestore, "ordens", String(order.id));    
+    return updateDoc(docRef,{status: statusValue, endPreparation:end})
+  }
+
+  // Entrega de orden
+  updateStatusDeliver(order: Orden, statusValue: string, deliver:string):Promise<any>{
+    const docRef = doc(this.firestore, "ordens", String(order.id));    
+    return updateDoc(docRef,{status: statusValue, dateDeliver:deliver})
+  }
+
+  // Cancelacion de un pedido
+  updateStatusCancel(order: Orden, statusValue: string, cancel:string):Promise<any>{
+    const docRef = doc(this.firestore, "ordens", String(order.id));    
+    return updateDoc(docRef,{status: statusValue, dateCancel:cancel})
   }
 }

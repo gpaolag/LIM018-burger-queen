@@ -113,7 +113,7 @@ export class PedidosComponent implements OnInit {
       arrOrder: this.arrOrder,
       totalOrder: this.totalOrder,
       status: 'pendiente',
-      dateCreation: new Date().toString(),
+      dateCreation: new Date().toLocaleTimeString() + ' - '+ new Date().toLocaleDateString(),
       beginPreparation: '',
       endPreparation: '',
       timePreparation: '',

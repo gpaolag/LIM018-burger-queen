@@ -12,12 +12,22 @@
     box-shadow: 5px 8px 12px rgba(0, 0, 0, 0.35);
     padding: 8px 10px !important;
 }
+.logo_navbar{
+    width: 50px;
+    border-radius: 50px;
+    box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.35);
+}
+.navbar-nav{
+    flex-direction: row !important;
+}
 .navbar-brand{
     text-shadow: 5px 8px 12px rgba(0, 0, 0, 0.35);
     padding: 0.5em 1em;
 }
 .box-logo{
     width: 20%;
+    display:flex ;
+    flex-direction: row !important;
 }
 .box-item{
     width: 80%;
@@ -86,5 +96,8 @@
     justify-content: center;
 }
 .nameFonweight{
-    font-weight: 800;
+    font-weight: 800 !important;
+}
+.font-name{
+    font-weight: 500;
 }
