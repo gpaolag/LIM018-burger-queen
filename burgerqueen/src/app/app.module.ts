@@ -14,7 +14,7 @@ import { environment } from '../environments/environment';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { LoginComponent } from './components/login/login.component';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbaradminComponent } from './components/navbaradmin/navbaradmin.component';
 import { ProductosComponent } from './components/productos/productos.component';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
@@ -36,6 +36,7 @@ import { CocineroComponent } from './components/cocina/cocinero/cocinero.compone
     ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore())

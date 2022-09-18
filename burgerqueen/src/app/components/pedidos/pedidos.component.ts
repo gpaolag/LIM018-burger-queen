@@ -1,8 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, NgModule } from '@angular/core';
 import listadePedidos from 'src/assets/json/data.json';
 import { PedidoService } from 'src/app/services/pedido.service';
 import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'app-pedidos',
@@ -16,7 +15,8 @@ export class PedidosComponent implements OnInit {
   @Input() arrOrder: any[] = [];
   @Input() totalOrder: number = 0;
 
-  name: string = '';
+  @Input() name: string = '';
+  @Input() prueba: string = '';
 
   constructor(private pedidosService: PedidoService,
     private router: Router) { }
@@ -103,10 +103,7 @@ export class PedidosComponent implements OnInit {
   cancelarPedido() {
     this.arrOrder = [];
     this.totalPedido();
-    this.name = 'adsad'
-    console.log(this.name);  
-
-   
+    this.name = ''
   }
 
  
@@ -125,7 +122,7 @@ export class PedidosComponent implements OnInit {
     };
     const resp = await this.pedidosService.addOrden(ordernew);
     this.cancelarPedido();
-    this.router.navigate(['/controlPedidos']);
+    //this.router.navigate(['/controlPedidos']);
 
   }
 }
