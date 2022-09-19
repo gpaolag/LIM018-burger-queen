@@ -39,7 +39,6 @@
     display: flex;
     justify-content: center;
     background-color:#795A30;
-    height: 100%;
 }
 .box-pedidos{
     width: 33.33%;
@@ -94,6 +93,7 @@
 .container-fluid{
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 .nameFonweight{
     font-weight: 800 !important;
