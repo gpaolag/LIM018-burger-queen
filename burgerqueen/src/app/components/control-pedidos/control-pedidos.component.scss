@@ -62,6 +62,9 @@
 .titlePending p{
     text-align: center;
     color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    text-shadow: 2px 2px 5px #2f2921;
 }
 #preparationTitle{
     background-color: #F39E22;
@@ -107,5 +110,8 @@
     justify-content: center;
 }
 .nameFonweight{
-    font-weight: 800;
+    font-weight: 800 !important;
+}
+.font-name{
+    font-weight: 500;
 }

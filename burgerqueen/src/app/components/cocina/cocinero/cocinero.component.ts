@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PedidoService } from 'src/app/services/pedido.service';
 import { Orden } from '../../pedidos/orden';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
 
 
 @Component({
@@ -15,7 +17,10 @@ export class CocineroComponent implements OnInit {
   public arrPreparing: Orden[]=[];
   public arrCancel:Orden[]=[];
 
-  constructor(private orderService:PedidoService) { }
+  constructor(
+    private userService: UserService,
+    private router: Router,
+    private orderService:PedidoService) { }
 
   ngOnInit(): void {
     this.orderService.getOrders().subscribe(order => {
@@ -38,27 +43,29 @@ export class CocineroComponent implements OnInit {
       }else if(e.status=='cancelado'){
         this.arrCancel.push(e);
       }
-    })
-    console.log(this.arrPreparing, ' arr cal', this.arrCancel);
-    
+    })    
   }
 
   statusPreparing(orden: Orden){
-    let fechaInicioPreparacion= new Date().toString();
+    let fechaInicioPreparacion= new Date().toLocaleTimeString() + ' - '+ new Date().toLocaleDateString();
       this.orderService.updateStatusOrder(orden, 'preparando', fechaInicioPreparacion);
       orden.status = 'preparando';
       orden.beginPreparation = fechaInicioPreparacion;
-      console.log('nuevo valor  ',orden);  
       this.filtrarStatus();    
   }
   statusPrepared(orden: Orden){
-    let fechaInicioPreparacion= new Date().toString();
-      this.orderService.updateStatusOrder(orden, 'preparado', fechaInicioPreparacion);
+    let fechafinPreparacion= new Date().toLocaleTimeString() + ' - '+ new Date().toLocaleDateString();
+      this.orderService.updateStatusEnd(orden, 'preparado', fechafinPreparacion);
       orden.status = 'preparado';
-      orden.beginPreparation = fechaInicioPreparacion;
+      orden.endPreparation = fechafinPreparacion;
       this.filtrarStatus();    
   }
 
-  
+  signOut(event: Event){
+    this.userService.signOut()
+    .then(()=>{
+      this.router.navigate(['']);
+    })
+  }
 
 }

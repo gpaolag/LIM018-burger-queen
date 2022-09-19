@@ -10,7 +10,7 @@
                 <div *ngFor="let orden of arrPending" class="card border-danger m-3" style="max-width: 18rem;">
                     <div class="card-body flex-box">
                         <div class="box-name-price">
-                            <p  class="font-name nameFonweight">Cliente: {{orden.nameCliente}}</p>
+                            <p class="font-name nameFonweight">Cliente: {{orden.nameCliente}}</p>
                             <p class="font-name">Total de Productos: {{orden.arrOrder.length}}</p>
 
                             <div *ngFor="let pedidos of orden.arrOrder">
@@ -19,6 +19,11 @@
                         </div>
 
                         <!-- <p class="card-text">{{pedido.category}}</p> -->
+                    </div>
+                    <div>
+                        <hr size="4px" color="black" />
+                        <p class="font-name">Creacion de Pedido</p>
+                        <p class="font-name">{{orden.dateCreation}}</p>
                     </div>
                     <div class="card-footer bg-transparent border-danger flex-box">
                         <button type="button" class="btn btn-danger" (click)="statusCancel(orden)">Cancelar</button>
@@ -45,7 +50,11 @@
                             <div *ngFor="let pedidos of orden.arrOrder">
                                 <p class="font-name">{{pedidos.cantidad}} {{pedidos.nombre}}</p>
                             </div>
-
+                        </div>
+                        <div>
+                            <hr size="4px" color="black" />
+                            <p class="font-name">Inicio de preparacion:</p>
+                            <p class="font-name">{{orden.beginPreparation}}</p>
                         </div>
                         <div class="card-footer bg-transparent border-warning flex-box">
                             <button type="button" class="btn btn-danger" (click)="statusCancel(orden)">Cancelar</button>
@@ -76,6 +85,11 @@
                                 <p class="font-name">{{pedidos.cantidad}} {{pedidos.nombre}}</p>
                             </div>
 
+                        </div>
+                        <div>
+                            <hr size="4px" color="black" />
+                            <p class="font-name">Fin de Preparacion:</p>
+                            <p class="font-name">{{orden.endPreparation}}</p>
                         </div>
                         <div class="card-footer bg-transparent border-primary flex-box">
                             <button type="button" class="btn btn-primary m-3"
@@ -110,6 +124,12 @@
                             </div>
 
                         </div>
+
+                        <div>
+                            <hr size="4px" color="black" />
+                            <p class="font-name">Entrega:</p>
+                            <p class="font-name">{{orden.dateDeliver}}</p>
+                        </div>
                         <!-- <p class="card-text">{{pedido.category}}</p> -->
                     </div>
 
@@ -136,6 +156,12 @@
                                 <p class="font-name">{{pedidos.cantidad}} {{pedidos.nombre}}</p>
                             </div>
 
+                        </div>
+
+                        <div>
+                            <hr size="4px" color="black" />
+                            <p class="font-name">Hora de Cancelación:</p>
+                            <p class="font-name">{{orden.dateCancel}}</p>
                         </div>
                         <!-- <p class="card-text">{{pedido.category}}</p> -->
                     </div>

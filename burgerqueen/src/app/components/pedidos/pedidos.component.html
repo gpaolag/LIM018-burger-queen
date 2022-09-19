@@ -39,8 +39,8 @@
     </div>
     <div class="order_pedido">
         <h3 style="text-align:center">Lista de Pedidos</h3>
-        <div  ng-app="myApp" ng-controller="myCtrl">
-            <input ngmodel="name"  #nameCliente   class="inputOrder" placeholder="Nombre del cliente" >
+        <div ng-app="myApp" ng-controller="myCtrl">
+            <input [(ngModel)]="name" #nameCliente class="inputOrder" placeholder="Nombre del cliente">
         </div>
         <hr class="solid">
         <div>

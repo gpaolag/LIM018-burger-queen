@@ -1,7 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, NgModule } from '@angular/core';
 import listadePedidos from 'src/assets/json/data.json';
 import { PedidoService } from 'src/app/services/pedido.service';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pedidos',
@@ -15,9 +15,11 @@ export class PedidosComponent implements OnInit {
   @Input() arrOrder: any[] = [];
   @Input() totalOrder: number = 0;
 
-  name: string = '';
+  @Input() name: string = '';
+  @Input() prueba: string = '';
 
-  constructor(private pedidosService: PedidoService) { }
+  constructor(private pedidosService: PedidoService,
+    private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -101,10 +103,7 @@ export class PedidosComponent implements OnInit {
   cancelarPedido() {
     this.arrOrder = [];
     this.totalPedido();
-    this.name = 'adsad'
-    console.log(this.name);  
-
-   
+    this.name = ''
   }
 
  
@@ -113,7 +112,7 @@ export class PedidosComponent implements OnInit {
       arrOrder: this.arrOrder,
       totalOrder: this.totalOrder,
       status: 'pendiente',
-      dateCreation: new Date().toString(),
+      dateCreation: new Date().toLocaleTimeString() + ' - '+ new Date().toLocaleDateString(),
       beginPreparation: '',
       endPreparation: '',
       timePreparation: '',
@@ -122,8 +121,8 @@ export class PedidosComponent implements OnInit {
       nameCliente: name
     };
     const resp = await this.pedidosService.addOrden(ordernew);
-    console.log(resp);
     this.cancelarPedido();
+    //this.router.navigate(['/controlPedidos']);
 
   }
 }
