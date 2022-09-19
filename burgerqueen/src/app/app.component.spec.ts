@@ -2,6 +2,16 @@ import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
+
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { environment } from '../environments/environment';
+
+
+import { PedidoService } from  './services/pedido.service';
+import { Auth } from '@angular/fire/auth';
+import { Firestore } from '@angular/fire/firestore';
+import { UserService } from './services/user.service';
+
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -11,6 +21,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+            providers: [{provide: Auth, useValue: UserService},{provide: Firestore, useValue: UserService}],
+
     }).compileComponents();
   });
 
@@ -26,10 +38,5 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('burgerqueen');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('burgerqueen app is running!');
-  });
+  
 });
