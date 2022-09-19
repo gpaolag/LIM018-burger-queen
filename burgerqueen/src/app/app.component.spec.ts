@@ -1,28 +1,17 @@
 import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
-
-
-import { FIREBASE_OPTIONS } from '@angular/fire/compat';
-import { environment } from '../environments/environment';
-
-
-import { PedidoService } from  './services/pedido.service';
 import { Auth } from '@angular/fire/auth';
+import { AppComponent } from './app.component';
+import { UserService } from 'src/app/services/user.service';
 import { Firestore } from '@angular/fire/firestore';
-import { UserService } from './services/user.service';
+
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
       declarations: [
         AppComponent
       ],
-            providers: [{provide: Auth, useValue: UserService},{provide: Firestore, useValue: UserService}],
-
+      providers: [{provide: Auth, useValue: UserService},{provide: Firestore, useValue: UserService}],
     }).compileComponents();
   });
 
@@ -38,5 +27,6 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('burgerqueen');
   });
 
-  
+  // it('should render title', () => {
+  //   const fixture = TestBed.createComponent(AppComponent);
 });
