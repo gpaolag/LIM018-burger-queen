@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './pedidos.component.html',
   styleUrls: ['./pedidos.component.scss']
 })
-export class PedidosComponent implements OnInit {
+export class PedidosComponent {
   public pedidos: any = listadePedidos;
   @Input() type: string = '';
   @Input() products: any = this.pedidos;
@@ -21,17 +21,18 @@ export class PedidosComponent implements OnInit {
   constructor(private pedidosService: PedidoService,
     private router: Router) { }
 
-  ngOnInit(): void {
-  }
-  categorias(categoryFilter: String): any {
+ 
+  categorias(categoryFilter: String, listadePedidos:any): any {
     let respuesta: any = listadePedidos.filter((x: any) => x.category === categoryFilter);
-
     return respuesta;
   }
+
   typeofCategory(value: string) {
     this.type = value;
-    this.products = this.categorias(this.type);
+    this.products = this.categorias(this.type, listadePedidos);
+    // return true;
   }
+
   totalPedido() {
     this.totalOrder = 0;
     this.arrOrder.forEach((elemento) => {
@@ -57,11 +58,12 @@ export class PedidosComponent implements OnInit {
         cantidad: 1,
         subTotal: parseInt(precio),
       });
-      console.log(this.arrOrder);
       
       this.totalPedido();
     }
   }
+
+
   eliminarProducto(nombre: string) {
     let filtrar: any = this.arrOrder.filter((elem, indice) => {
       if (elem.nombre === nombre) {
@@ -72,7 +74,11 @@ export class PedidosComponent implements OnInit {
       return false;
     });
   }
+
+
   agregarCantidad(nombre: string) {
+    console.log('arraorder', this.arrOrder);
+    
     let filtrar: any = this.arrOrder.filter((elem, indice) => {
       if (elem.nombre === nombre) {
         this.arrOrder[indice].cantidad += 1;
@@ -83,6 +89,9 @@ export class PedidosComponent implements OnInit {
       return false;
     });
   }
+
+
+
   quitarCantidad(nombre: string) {
     let filtrar: any = this.arrOrder.filter((elem, indice) => {
       if (elem.nombre === nombre) {

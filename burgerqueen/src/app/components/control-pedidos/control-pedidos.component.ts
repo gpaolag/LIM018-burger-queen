@@ -21,6 +21,8 @@ export class ControlPedidosComponent implements OnInit {
 
   ngOnInit(): void {
    this.orderService.getOrders().subscribe(order => {
+    console.log('orders', order);
+    
     this.arrListOrders =  order;
     this.filtrarStatus();
     })
@@ -31,6 +33,7 @@ export class ControlPedidosComponent implements OnInit {
     this.arrPreparing=[];
     this.arrPrepared=[];
     this.arrCancel=[];
+    this.arrDeliver=[];
 
     this.arrListOrders.forEach(e =>{
       if(e.status=='pendiente'){
