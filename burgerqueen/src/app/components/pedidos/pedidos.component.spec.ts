@@ -96,6 +96,12 @@ describe('PedidosComponent', () => {
     expect(component.arrOrder[0].cantidad).toBe(1);
   });
 
+  it('quitarCantidad() --> quita total de un producto cuando es 0', () => {
+    component.quitarCantidad('Café americano');
+    component.quitarCantidad('Café americano');
+    expect(component.arrOrder.length).toBe(0);
+  });
+
   it('cancelarPedido() --> quita una orden', () => {
     component.cancelarPedido();
     expect(component.arrOrder.length).toBe(0);
@@ -109,5 +115,15 @@ describe('PedidosComponent', () => {
   it('typeofCategory() --> filtra categorias', () => {
     component.typeofCategory('acompañamientos');
     expect(component.products.length).toBe(1);
+  });
+
+  it('orderPedido() --> agrega un producto nuevo en una orden', () => {
+    component.orderPedido("2",'Café con leche', '7');
+    expect(component.arrOrder.length).toBe(2);
+  });
+
+  it('orderPedido() --> agrega un numero mas a cantidad a un producto cuando ya existe en una orden', () => {
+    component.orderPedido("1",'Café americano ', '5');
+    expect(component.arrOrder[0].cantidad).toBe(3);
   });
 });

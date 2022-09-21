@@ -20,9 +20,7 @@ export class ControlPedidosComponent implements OnInit {
   constructor(private orderService:PedidoService) { }
 
   ngOnInit(): void {
-   this.orderService.getOrders().subscribe(order => {
-    console.log('orders', order);
-    
+   this.orderService.getOrders().subscribe(order => {    
     this.arrListOrders =  order;
     this.filtrarStatus();
     })
