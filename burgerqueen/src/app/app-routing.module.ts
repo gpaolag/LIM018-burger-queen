@@ -20,7 +20,6 @@ const routes: Routes = [
   {path:'cocina', component: CocineroComponent},
   {path:'**', redirectTo:'pedidos', pathMatch:'full'},
  
-
 ];
 
 //exportar el modulo
