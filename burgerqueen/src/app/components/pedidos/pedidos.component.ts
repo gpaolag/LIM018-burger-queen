@@ -29,7 +29,7 @@ export class PedidosComponent {
 
   typeofCategory(value: string) {
     this.type = value;
-    this.products = this.categorias(this.type, listadePedidos);
+    this.products = this.categorias(this.type, this.pedidos);
     // return true;
   }
 
@@ -111,6 +111,8 @@ export class PedidosComponent {
   //metodos de pedidos 
   cancelarPedido() {
     this.arrOrder = [];
+    console.log(this.arrOrder);
+    
     this.totalPedido();
     this.name = ''
   }
