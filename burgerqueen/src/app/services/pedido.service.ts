@@ -15,7 +15,6 @@ export class PedidoService {
     const ordenRef = collection(this.firestore, 'ordens')
     const idOrder = await addDoc(ordenRef, orden);
     orden.id = idOrder.id;
-    console.log(orden.id);
     
   }
 

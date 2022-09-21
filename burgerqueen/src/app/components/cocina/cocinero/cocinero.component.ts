@@ -46,16 +46,16 @@ export class CocineroComponent implements OnInit {
     })    
   }
 
-  statusPreparing(orden: Orden){
+  async statusPreparing(orden: Orden){
     let fechaInicioPreparacion= new Date().toLocaleTimeString() + ' - '+ new Date().toLocaleDateString();
-      this.orderService.updateStatusOrder(orden, 'preparando', fechaInicioPreparacion);
+      await this.orderService.updateStatusOrder(orden, 'preparando', fechaInicioPreparacion);
       orden.status = 'preparando';
       orden.beginPreparation = fechaInicioPreparacion;
       this.filtrarStatus();    
   }
-  statusPrepared(orden: Orden){
+  async statusPrepared(orden: Orden){
     let fechafinPreparacion= new Date().toLocaleTimeString() + ' - '+ new Date().toLocaleDateString();
-      this.orderService.updateStatusEnd(orden, 'preparado', fechafinPreparacion);
+      await this.orderService.updateStatusEnd(orden, 'preparado', fechafinPreparacion);
       orden.status = 'preparado';
       orden.endPreparation = fechafinPreparacion;
       this.filtrarStatus();    

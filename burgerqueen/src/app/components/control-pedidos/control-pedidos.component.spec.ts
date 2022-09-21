@@ -14,34 +14,34 @@ describe('ControlPedidosComponent', () => {
       return of(
         [
           {
-              "nameCliente": "Maria",
-              "dateCancel": "",
-              "timePreparation": "",
-              "dateCreation": "8:36:59 - 20/9/2022",
-              "endPreparation": "8:38:24 - 20/9/2022",
-              "beginPreparation": "8:37:44 - 20/9/2022",
-              "dateDeliver": "8:38:55 - 20/9/2022",
-              "arrOrder": [
-                  {
-                      "nombre": "Hamburguesa doble de pollo",
-                      "precio": "15",
-                      "id": "6",
-                      "subTotal": 30,
-                      "cantidad": 2
-                  },
-                  {
-                      "id": "13",
-                      "nombre": "Hamburguesa doble de Res",
-                      "subTotal": 15,
-                      "cantidad": 1,
-                      "precio": "15"
-                  }
-              ],
-              "totalOrder": 45,
-              "status": "entregado",
-              "id": "babDGzpL81RouWUoDyXA"
+            nameCliente: "Maria",
+            dateCancel: "",
+            timePreparation: "",
+            dateCreation: "8:36:59 - 20/9/2022",
+            endPreparation: "",
+            beginPreparation: "",
+            dateDeliver: "",
+            arrOrder: [
+              {
+                nombre: "Hamburguesa doble de pollo",
+                precio: "15",
+                id: "6",
+                subTotal: 30,
+                cantidad: 2
+              },
+              {
+                id: "13",
+                nombre: "Hamburguesa doble de Res",
+                subTotal: 15,
+                cantidad: 1,
+                precio: "15"
+              }
+            ],
+            totalOrder: 45,
+            status: "pendiente",
+            id: "babDGzpL81RouWUoDyXA"
           }
-      ]
+        ]
       )
     }
   }
