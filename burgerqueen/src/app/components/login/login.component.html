@@ -5,17 +5,18 @@
         </div>       
         <div class="formLog m-3 p-4">                      
             <h2>Login - Coffee Dream</h2>
-            <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+            <form [formGroup]="formLogin" #formContacto="ngForm" (ngSubmit)="onSubmit()">
                 <div class="mb-3">
                     <label class="form-label">Email</label>
                     <input type="text" class="form-control" formControlName="email" >
+                    
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Password</label>
                     <input type="password" class="form-control" formControlName="password" >
                 </div>
                 <div class="center">
-                    <input class="btnClass" type="submit" value="Enviar">
+                    <input class="btnClass" type="submit" value="Ingresar"  [disabled]="!formContacto.form.valid">
 
                 </div>
             </form>

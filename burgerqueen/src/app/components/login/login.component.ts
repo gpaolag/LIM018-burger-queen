@@ -23,10 +23,9 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onSubmit() {
-    this.userService.login(this.formLogin.value)
+  onSubmit() {    
+      this.userService.login(this.formLogin.value)
       .then((response: any) => {
-        console.log(response);
         const emailuser : any = response.user.email;
         if (/coffeedream.com/.test(emailuser)){
           this.router.navigate(['productos']);
@@ -38,7 +37,8 @@ export class LoginComponent implements OnInit {
         }
         
       })
-      .catch((error: any) => console.log(error));
-  }
-
+      .catch((error: any) => alert('Ingrese valores correctos'));
+    }
+    
+  
 }

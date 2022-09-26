@@ -40,7 +40,13 @@
     <div class="order_pedido">
         <h3 style="text-align:center">Lista de Pedidos</h3>
         <div ng-app="myApp" ng-controller="myCtrl">
-            <input [(ngModel)]="name" #nameCliente class="inputOrder" placeholder="Nombre del cliente">
+            <input #nameCliente="ngModel" [(ngModel)]="name" class="inputOrder" placeholder="Nombre del cliente"
+                required>
+            <p *ngIf="nameCliente.touched && !nameCliente.valid" [ngStyle]="{
+                    'color': 'red'
+                 }">
+                *Campo obligatorio
+            </p>
         </div>
         <hr class="solid">
         <div>

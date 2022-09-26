@@ -131,8 +131,16 @@ export class PedidosComponent {
       dateCancel: '',
       nameCliente: name
     };
-    const resp = await this.pedidosService.addOrden(ordernew);
-    this.cancelarPedido();
+    if(ordernew.nameCliente && this.arrOrder.length>0){
+      const resp = await this.pedidosService.addOrden(ordernew);
+      this.cancelarPedido();
+      alert('El pedido ha enviado correctamente');
+      
+    }else{
+      alert('Ingrese los campos obligatorios');
+      
+    }
+
     //this.router.navigate(['/controlPedidos']);
 
   }
