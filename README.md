@@ -69,8 +69,7 @@ rápidamente a los clientes que las hicieron.
 
 #### [Historia de usuario 1] 
 
-![](![image](https://user-images.githubusercontent.com/12961803/192405991-085436c9-1d7d-42a3-9fb8-de323269d3ad.png)
-){width='100px'}
+![](https://github.com/elisabethfarfan/LIM018-burger-queen/blob/main/burgerqueen/src/app/components/images/VISTA%20%20HU%201%20-%20MESERO%20REALIZA%20PEDIDO.png?raw=true){width='100px'}
 
 #### [Historia de usuario 1.2] 
 
