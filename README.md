@@ -1,4 +1,4 @@
-# Burger Queen
+# Coffee Dream
 
 ![](https://github.com/elisabethfarfan/LIM018-burger-queen/blob/main/burgerqueen/src/app/components/images/LOGIN.png?raw=true)
 
