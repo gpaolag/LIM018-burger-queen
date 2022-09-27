@@ -1,6 +1,6 @@
 # Burger Queen
 
-![](https://github.com/elisabethfarfan/LIM018-burger-queen/blob/main/burgerqueen/src/app/components/images/LOGIN.png?raw=true){width='100px'}
+![](https://github.com/elisabethfarfan/LIM018-burger-queen/blob/main/burgerqueen/src/app/components/images/LOGIN.png?raw=true)
 
 ***
 
@@ -69,7 +69,8 @@ rápidamente a los clientes que las hicieron.
 
 #### [Historia de usuario 1] 
 
-![](https://github.com/elisabethfarfan/LIM018-burger-queen/blob/main/burgerqueen/src/app/components/images/LOGIN.png?raw=true){width='100px'}
+![](![image](https://user-images.githubusercontent.com/12961803/192405991-085436c9-1d7d-42a3-9fb8-de323269d3ad.png)
+){width='100px'}
 
 #### [Historia de usuario 1.2] 
 
