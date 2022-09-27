@@ -1,19 +1,12 @@
 # Burger Queen
 
-## Índice
-
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Pistas, tips y lecturas complementarias](#6-pistas-tips-y-lecturas-complementarias)
+![](https://github.com/elisabethfarfan/LIM018-burger-queen/blob/main/burgerqueen/src/app/components/images/LOGIN.png?raw=true){width='100px'}
 
 ***
 
 ## 1. Introducción
 
-
+Coffee Dream cafetería tiene como propósito brindar el mejor café, y también ofrece un espacio tranquilo, moderno y tecnológico tanto para clientes como trabajadores. Pues cuentan con una web app para tablets que permite a los meseros llevar su sistema con ellos por todo el lugar, ingresando pedidos que son enviados al jefe de cocina haciendo más eficiente el proceso de cada servicio.
 
 ## 2. Resumen del proyecto
 
@@ -25,7 +18,7 @@ El objetivo principal es aprender a construir una interfaz web usando el framewo
 
 ## 3.1. Historias de Usuario y Criterios de Aceptación 📢 📝
 
-#### [Historia de usuario 1] Mesero/a debe poder tomar pedido de cliente
+#### [Historia de usuario 1] Mesero/a debe poder tomar pedido de cliente 
 
 Yo como meserx quiero tomar el pedido de un cliente para no depender de mi mala
 memoria, para saber cuánto cobrar, y enviarlo a la cocina para evitar errores y
@@ -73,6 +66,18 @@ rápidamente a los clientes que las hicieron.
 
 ## 3.2. Interfaz 🚀
 
+
+#### [Historia de usuario 1] 
+
+![](https://github.com/elisabethfarfan/LIM018-burger-queen/blob/main/burgerqueen/src/app/components/images/LOGIN.png?raw=true){width='100px'}
+
+#### [Historia de usuario 1.2] 
+
+![](https://github.com/elisabethfarfan/LIM018-burger-queen/blob/main/burgerqueen/src/app/components/images/VISTA%20%20HU%201%20-%20MOZO%20controlde%20pedids.png?raw=true){width='100px'}
+
+#### [Historia de usuario 2] 
+
+![](https://github.com/elisabethfarfan/LIM018-burger-queen/blob/main/burgerqueen/src/app/components/images/VISTA%20%20HU%202%20-%20JEFE%20DE%20COCINA.png?raw=true){width='100px'}
 
 
 ## 4. Objetivos de aprendizaje 📄
