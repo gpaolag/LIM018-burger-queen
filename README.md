@@ -69,16 +69,15 @@ rápidamente a los clientes que las hicieron.
 
 #### [Historia de usuario 1] 
 
-![](https://github.com/elisabethfarfan/LIM018-burger-queen/blob/main/burgerqueen/src/app/components/images/VISTA%20%20HU%201%20-%20MESERO%20REALIZA%20PEDIDO.png?raw=true){width='100px'}
+![](https://github.com/elisabethfarfan/LIM018-burger-queen/blob/main/burgerqueen/src/app/components/images/VISTA%20%20HU%201%20-%20MESERO%20REALIZA%20PEDIDO.png?raw=true)
 
 #### [Historia de usuario 1.2] 
 
-![](https://github.com/elisabethfarfan/LIM018-burger-queen/blob/main/burgerqueen/src/app/components/images/VISTA%20%20HU%201%20-%20MOZO%20controlde%20pedids.png?raw=true){width='100px'}
+![](https://github.com/elisabethfarfan/LIM018-burger-queen/blob/main/burgerqueen/src/app/components/images/VISTA%20%20HU%201%20-%20MOZO%20controlde%20pedids.png?raw=true)
 
 #### [Historia de usuario 2] 
 
-![](https://github.com/elisabethfarfan/LIM018-burger-queen/blob/main/burgerqueen/src/app/components/images/VISTA%20%20HU%202%20-%20JEFE%20DE%20COCINA.png?raw=true){width='100px'}
-
+![](https://github.com/elisabethfarfan/LIM018-burger-queen/blob/main/burgerqueen/src/app/components/images/VISTA%20%20HU%202%20-%20JEFE%20DE%20COCINA.png?raw=true)
 
 ## 4. Objetivos de aprendizaje 📄
 
