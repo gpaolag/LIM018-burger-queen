@@ -48,17 +48,16 @@ export class ControlPedidosComponent implements OnInit {
     })
   }
 
-  async statusCancel(orden: Orden){
+  statusCancel(orden: Orden){
     let fechaCanceladoPreparacion= new Date().toLocaleTimeString() + ' - '+ new Date().toLocaleDateString();
-     await this.orderService.updateStatusCancel(orden, 'cancelado', fechaCanceladoPreparacion);
+      this.orderService.updateStatusCancel(orden, 'cancelado', fechaCanceladoPreparacion);
       orden.status = 'cancelado';
       orden.beginPreparation = fechaCanceladoPreparacion;
       this.filtrarStatus();    
   }
-  
-  async statusDeliver(orden: Orden){
+  statusDeliver(orden: Orden){
     let fechaentregaPreparacion= new Date().toLocaleTimeString() + ' - '+ new Date().toLocaleDateString();
-      await this.orderService.updateStatusDeliver(orden, 'entregado', fechaentregaPreparacion);
+      this.orderService.updateStatusDeliver(orden, 'entregado', fechaentregaPreparacion);
       orden.status = 'entregado';
       orden.beginPreparation = fechaentregaPreparacion; 
       this.filtrarStatus();    
